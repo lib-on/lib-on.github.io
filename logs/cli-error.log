@@ -1,0 +1,12 @@
+2017-03-30 14:10:09 Error: [Cake\Console\Exception\MissingShellException] Shell class for "Servver" could not be found. in /home/odin/biblioteca/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php on line 327
+Exception Attributes: array (
+  'class' => 'Servver',
+)
+Stack Trace:
+#0 /home/odin/biblioteca/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(226): Cake\Console\ShellDispatcher->findShell('Servver')
+#1 /home/odin/biblioteca/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#2 /home/odin/biblioteca/vendor/cakephp/cakephp/src/Console/ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#3 /home/odin/biblioteca/bin/cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#4 {main}
+
+
