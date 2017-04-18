@@ -14,12 +14,12 @@
     <fieldset>
         <legend><?= __('Add Livro') ?></legend>
         <?php
-            echo $this->Form->control('código do livro');
-            echo $this->Form->control('título');
-            echo $this->Form->control('ISBN');
-            echo $this->Form->control('autor');
-            echo $this->Form->control('editora');
-            echo $this->Form->control('sinopse');
+            echo $this->Form->control('código do livro', ['placeholder'=>'codigo do livro']);
+            echo $this->Form->control('título', ['placeholder'=>'titulo']);
+            echo $this->Form->control('ISBN', ['placeholder'=>'ISBN']);
+            echo $this->Form->control('autor', ['placeholder'=>'autor']);
+            echo $this->Form->control('editora', ['placeholder'=>'editora']);
+            echo $this->Form->control('sinopse', ['placeholder'=>'sinopse']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

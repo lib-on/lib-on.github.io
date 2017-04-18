@@ -20,12 +20,12 @@
     <fieldset>
         <legend><?= __('Edit Livro') ?></legend>
         <?php
-            echo $this->Form->control('codigo_livro');
-            echo $this->Form->control('titulo');
-            echo $this->Form->control('isbn');
-            echo $this->Form->control('autor');
-            echo $this->Form->control('editora');
-            echo $this->Form->control('sinopse');
+            echo $this->Form->control('codigo_livro', ['placeholder'=>'codigo_livro']);
+            echo $this->Form->control('titulo', ['placeholder'=>'titulo']);
+            echo $this->Form->control('isbn', ['placeholder'=>'isbn']);
+            echo $this->Form->control('autor', ['placeholder'=>'autor']);
+            echo $this->Form->control('editora', ['placeholder'=>'editora']);
+            echo $this->Form->control('sinopse', ['placeholder'=>'sinopse']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
