@@ -8,7 +8,7 @@ a:hover {
 }
 
 a {
-    color: #1798A5;
+    color: #696969;
 }
 
 .side-nav li a:not(.button) {
@@ -36,7 +36,7 @@ header .header-title {
 legend {
     color:#15848F;
 }
-
+/*-------------------*/
 .row {
     max-width: 80rem;
 }
@@ -114,7 +114,7 @@ ul.pagination .disabled:hover a {
     text-align: right;
     color: rgba(0, 0 ,0 , 0.54);
 }
-
+ /*--------------*/
 .asc:after {
     content: " \2193";
 }
@@ -359,24 +359,24 @@ table {
 }
 
 table thead {
-    background: none;
+    background: #ADD8E6;
 }
 
-table tr {
+/*table tr {
     border-bottom: 1px solid #ebebec;
-}
+}*/
 
-table thead tr {
+/*table thead tr {
     border-bottom: 1px solid #1798A5;
-}
+}*/
 
-table tr th {
+/*table tr th {
     padding: 0.5625rem 0.625rem;
     font-size: 0.875rem;
     color: #1798A5;
     text-align: left;
     border-bottom: 2px solid #1798A5;
-}
+}*/
 
 table tr:nth-of-type(even) {
     background: none;
@@ -488,12 +488,12 @@ div.message.hidden {
 /* Force equal height by overflowing */
 .content,
 #actions-sidebar {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+    margin-bottom: -149px;
+    padding-bottom: 732px;
 }
-@media(max-width: 640px) {
+@media(max-width: 1000%) {
     #actions-sidebar {
-        padding-bottom: 2rem;
+        padding-bottom: 1.8rem;
         margin-bottom: 0;
     }
 }

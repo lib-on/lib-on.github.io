@@ -5,7 +5,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Funções') ?></li>
+        <li class="heading"><?= __('Lib-on') ?></li>
         <li><?= $this->Html->link(__('Cadastre o Livro'), ['action' => 'add']) ?></li>
     </ul>
 </nav>
@@ -21,7 +21,7 @@
                 <th scope="col"><?= $this->Paginator->sort('autor') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('editora') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('sinopse') ?></th>
-                <th scope="col" class="actions"><?= __('Funções') ?></th>
+                <!-- <th scope="col" class="actions"><?= __('Funções') ?></th> -->
             </tr>
         </thead>
         <tbody>
@@ -34,11 +34,11 @@
                 <td><?= h($livro->autor) ?></td>
                 <td><?= h($livro->editora) ?></td>
                 <td><?= h($livro->sinopse) ?></td>
-                <td class="actions">
+                <!-- <td class="actions">
                     <?= $this->Html->link(__('Ver'), ['action' => 'view', $livro->id]) ?>
                     <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livro->id]) ?>
                     <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
-                </td>
+                </td> -->
             </tr>
             <?php endforeach; ?>
         </tbody>
