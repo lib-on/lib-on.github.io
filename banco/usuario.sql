@@ -1,4 +1,4 @@
-create table usuarios (
+create table usuarios(
 
 	id integer(11) not null primary key,
 	nome varchar(45) not null,
