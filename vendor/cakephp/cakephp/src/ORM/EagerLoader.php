@@ -42,7 +42,7 @@ class EagerLoader
      *
      * @var \Cake\ORM\EagerLoadable[]|\Cake\ORM\EagerLoadable|null
      */
-    protected $_normalized = null;
+    protected $_normalized;
 
     /**
      * List of options accepted by associations in contain()
@@ -496,13 +496,6 @@ class EagerLoader
             throw new InvalidArgumentException(
                 sprintf('%s is not associated with %s', $parent->getAlias(), $alias)
             );
-        }
-        if ($instance->getAlias() !== $alias) {
-            throw new InvalidArgumentException(sprintf(
-                "You have contained '%s' but that association was bound as '%s'.",
-                $alias,
-                $instance->getAlias()
-            ));
         }
 
         $paths += ['aliasPath' => '', 'propertyPath' => '', 'root' => $alias];

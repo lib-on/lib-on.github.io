@@ -9,6 +9,10 @@ use Cake\Validation\Validator;
 /**
  * Livros Model
  *
+ * @property \Cake\ORM\Association\BelongsTo $Categorias
+ * @property \Cake\ORM\Association\BelongsTo $Editoras
+ * @property \Cake\ORM\Association\HasMany $Emprestimos
+ *
  * @method \App\Model\Entity\Livro get($primaryKey, $options = [])
  * @method \App\Model\Entity\Livro newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\Livro[] newEntities(array $data, array $options = [])
@@ -33,6 +37,17 @@ class LivrosTable extends Table
         $this->setTable('livros');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+
+        $this->belongsTo('Categorias', [
+            'foreignKey' => 'categoria_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('Editoras', [
+            'foreignKey' => 'editora_id'
+        ]);
+        $this->hasMany('Emprestimos', [
+            'foreignKey' => 'livro_id'
+        ]);
     }
 
     /**
@@ -48,10 +63,6 @@ class LivrosTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->requirePresence('codigo_livro', 'create')
-            ->notEmpty('codigo_livro');
-
-        $validator
             ->requirePresence('titulo', 'create')
             ->notEmpty('titulo');
 
@@ -60,17 +71,28 @@ class LivrosTable extends Table
             ->notEmpty('isbn');
 
         $validator
+            ->requirePresence('edicao', 'create')
+            ->notEmpty('edicao');
+
+        $validator
             ->requirePresence('autor', 'create')
             ->notEmpty('autor');
 
-        $validator
-            ->requirePresence('editora', 'create')
-            ->notEmpty('editora');
-
-        $validator
-            ->requirePresence('sinopse', 'create')
-            ->notEmpty('sinopse');
-
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->existsIn(['categoria_id'], 'Categorias'));
+        $rules->add($rules->existsIn(['editora_id'], 'Editoras'));
+
+        return $rules;
     }
 }

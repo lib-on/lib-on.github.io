@@ -46,7 +46,9 @@ CREATE TABLE livros(
     edicao varchar(50) not null,
     autor varchar(100) not null,
     categoria_id int(4) not null,
-    CONSTRAINT `categoria_id` FOREIGN KEY (categoria_id) REFERENCES categorias(`id`)
+    editora_id int(11),
+    CONSTRAINT `categoria_id` FOREIGN KEY (categoria_id) REFERENCES categorias(`id`),
+    CONSTRAINT `editora_id` FOREIGN KEY (editora_id) REFERENCES editoras(`id`)
 );
 
 CREATE TABLE livro_fisico(

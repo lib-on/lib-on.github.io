@@ -13,6 +13,12 @@
             )
         ?></li>
         <li><?= $this->Html->link(__('List Livros'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="livros form large-9 medium-8 columns content">
@@ -20,12 +26,12 @@
     <fieldset>
         <legend><?= __('Edit Livro') ?></legend>
         <?php
-            echo $this->Form->control('codigo_livro', ['placeholder'=>'codigo_livro']);
-            echo $this->Form->control('titulo', ['placeholder'=>'titulo']);
-            echo $this->Form->control('isbn', ['placeholder'=>'isbn']);
-            echo $this->Form->control('autor', ['placeholder'=>'autor']);
-            echo $this->Form->control('editora', ['placeholder'=>'editora']);
-            echo $this->Form->control('sinopse', ['placeholder'=>'sinopse']);
+            echo $this->Form->control('titulo');
+            echo $this->Form->control('isbn');
+            echo $this->Form->control('edicao');
+            echo $this->Form->control('autor');
+            echo $this->Form->control('categoria_id', ['options' => $categorias]);
+            echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

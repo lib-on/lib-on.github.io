@@ -24,7 +24,10 @@ class LivrosTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.livros'
+        'app.livros',
+        'app.categorias',
+        'app.editoras',
+        'app.emprestimos'
     ];
 
     /**
@@ -67,6 +70,16 @@ class LivrosTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
+    {
+        $this->markTestIncomplete('Not implemented yet.');
+    }
+
+    /**
+     * Test buildRules method
+     *
+     * @return void
+     */
+    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

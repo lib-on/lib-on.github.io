@@ -7,12 +7,16 @@ use Cake\ORM\Entity;
  * Livro Entity
  *
  * @property int $id
- * @property string $codigo_livro
  * @property string $titulo
  * @property string $isbn
+ * @property string $edicao
  * @property string $autor
- * @property string $editora
- * @property string $sinopse
+ * @property int $categoria_id
+ * @property int $editora_id
+ *
+ * @property \App\Model\Entity\Categoria $categoria
+ * @property \App\Model\Entity\Editora $editora
+ * @property \App\Model\Entity\Emprestimo[] $emprestimos
  */
 class Livro extends Entity
 {

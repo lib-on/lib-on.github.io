@@ -18,6 +18,9 @@ class LivrosController extends AppController
      */
     public function index()
     {
+        $this->paginate = [
+            'contain' => ['Categorias', 'Editoras']
+        ];
         $livros = $this->paginate($this->Livros);
 
         $this->set(compact('livros'));
@@ -34,7 +37,7 @@ class LivrosController extends AppController
     public function view($id = null)
     {
         $livro = $this->Livros->get($id, [
-            'contain' => []
+            'contain' => ['Categorias', 'Editoras', 'Emprestimos']
         ]);
 
         $this->set('livro', $livro);
@@ -58,7 +61,9 @@ class LivrosController extends AppController
             }
             $this->Flash->error(__('The livro could not be saved. Please, try again.'));
         }
-        $this->set(compact('livro'));
+        $categorias = $this->Livros->Categorias->find('list', ['limit' => 200]);
+        $editoras = $this->Livros->Editoras->find('list', ['limit' => 200]);
+        $this->set(compact('livro', 'categorias', 'editoras'));
         $this->set('_serialize', ['livro']);
     }
 
@@ -83,7 +88,9 @@ class LivrosController extends AppController
             }
             $this->Flash->error(__('The livro could not be saved. Please, try again.'));
         }
-        $this->set(compact('livro'));
+        $categorias = $this->Livros->Categorias->find('list', ['limit' => 200]);
+        $editoras = $this->Livros->Editoras->find('list', ['limit' => 200]);
+        $this->set(compact('livro', 'categorias', 'editoras'));
         $this->set('_serialize', ['livro']);
     }
 

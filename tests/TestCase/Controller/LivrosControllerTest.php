@@ -16,7 +16,10 @@ class LivrosControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.livros'
+        'app.livros',
+        'app.categorias',
+        'app.editoras',
+        'app.emprestimos'
     ];
 
     /**
