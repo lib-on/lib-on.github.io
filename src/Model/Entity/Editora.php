@@ -7,6 +7,7 @@ use Cake\ORM\Entity;
  * Editora Entity
  *
  * @property int $id
+ * @property string $nome
  * @property string $contato
  * @property string $endereco
  * @property string $email

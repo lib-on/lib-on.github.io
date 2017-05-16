@@ -44,7 +44,8 @@ class AlunosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->allowEmpty('matricula', 'create');
+            ->requirePresence('matricula', 'create')
+            ->notEmpty('matricula');
 
         $validator
             ->requirePresence('curso', 'create')

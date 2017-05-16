@@ -30,7 +30,7 @@ class LivrosFixture extends TestFixture
         ],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
-            'categoria_id' => ['type' => 'foreign', 'columns' => ['categoria_id'], 'references' => ['categorias', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
+            'categoria_id' => ['type' => 'foreign', 'columns' => ['categoria_id'], 'references' => ['categorias', 'identificador'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
             'editora_id' => ['type' => 'foreign', 'columns' => ['editora_id'], 'references' => ['editoras', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [

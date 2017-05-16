@@ -22,6 +22,7 @@
     <fieldset>
         <legend><?= __('Edit Categoria') ?></legend>
         <?php
+            echo $this->Form->control('identificador');
             echo $this->Form->control('descricao');
         ?>
     </fieldset>

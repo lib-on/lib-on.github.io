@@ -54,6 +54,10 @@ class EditorasTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->requirePresence('nome', 'create')
+            ->notEmpty('nome');
+
+        $validator
             ->requirePresence('contato', 'create')
             ->notEmpty('contato');
 

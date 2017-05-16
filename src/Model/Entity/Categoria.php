@@ -6,7 +6,7 @@ use Cake\ORM\Entity;
 /**
  * Categoria Entity
  *
- * @property int $id
+ * @property int $identificador
  * @property string $descricao
  *
  * @property \App\Model\Entity\Livro[] $livros

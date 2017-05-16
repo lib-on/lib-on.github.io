@@ -50,7 +50,8 @@ class FuncionariosTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->allowEmpty('siape', 'create');
+            ->requirePresence('siape', 'create')
+            ->notEmpty('siape');
 
         $validator
             ->requirePresence('funcao', 'create')

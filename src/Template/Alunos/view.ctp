@@ -10,6 +10,8 @@
         <li><?= $this->Form->postLink(__('Delete Aluno'), ['action' => 'delete', $aluno->matricula], ['confirm' => __('Are you sure you want to delete # {0}?', $aluno->matricula)]) ?> </li>
         <li><?= $this->Html->link(__('List Alunos'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Aluno'), ['action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Pessoas'), ['controller' => 'Pessoas', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New Pessoa'), ['controller' => 'Pessoas', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="alunos view large-9 medium-8 columns content">
@@ -40,8 +42,8 @@
             <td><?= h($aluno->contato) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Id Pessoa') ?></th>
-            <td><?= $this->Number->format($aluno->id_pessoa) ?></td>
+            <th scope="row"><?= __('Pessoa') ?></th>
+            <td><?= $aluno->has('pessoa') ? $this->Html->link($aluno->pessoa->id, ['controller' => 'Pessoas', 'action' => 'view', $aluno->pessoa->id]) : '' ?></td>
         </tr>
     </table>
 </div>

@@ -16,6 +16,7 @@
     <fieldset>
         <legend><?= __('Add Editora') ?></legend>
         <?php
+            echo $this->Form->control('nome');
             echo $this->Form->control('contato');
             echo $this->Form->control('endereco');
             echo $this->Form->control('email');

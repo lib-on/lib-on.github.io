@@ -50,8 +50,8 @@ class CategoriasTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
+            ->integer('identificador')
+            ->allowEmpty('identificador', 'create');
 
         $validator
             ->allowEmpty('descricao');

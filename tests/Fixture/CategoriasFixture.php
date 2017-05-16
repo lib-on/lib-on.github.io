@@ -17,10 +17,10 @@ class CategoriasFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'id' => ['type' => 'integer', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'identificador' => ['type' => 'integer', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         'descricao' => ['type' => 'string', 'length' => 100, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+            'primary' => ['type' => 'primary', 'columns' => ['identificador'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -36,7 +36,7 @@ class CategoriasFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => 1,
+            'identificador' => 1,
             'descricao' => 'Lorem ipsum dolor sit amet'
         ],
     ];

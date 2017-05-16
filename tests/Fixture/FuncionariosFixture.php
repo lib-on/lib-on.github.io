@@ -28,7 +28,6 @@ class FuncionariosFixture extends TestFixture
             'pessoa_id' => ['type' => 'index', 'columns' => ['pessoa_id'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['siape'], 'length' => []],
             'pessoa_id' => ['type' => 'foreign', 'columns' => ['pessoa_id'], 'references' => ['pessoas', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
@@ -45,7 +44,7 @@ class FuncionariosFixture extends TestFixture
      */
     public $records = [
         [
-            'siape' => '4de1702a-d6f9-4828-8f03-6b7c001f5023',
+            'siape' => 'Lorem ipsum dolor ',
             'funcao' => 'Lorem ipsum dolor sit amet',
             'setor' => 'Lorem ipsum dolor sit amet',
             'email' => 'Lorem ipsum dolor sit amet',

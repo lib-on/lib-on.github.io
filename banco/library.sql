@@ -35,7 +35,7 @@ CREATE TABLE editoras(
 );
 
 CREATE TABLE categorias(
-    id int(4) not null PRIMARY KEY,
+    identificador int(4) not null PRIMARY KEY,
     descricao varchar(100)
 );
 
@@ -47,7 +47,7 @@ CREATE TABLE livros(
     autor varchar(100) not null,
     categoria_id int(4) not null,
     editora_id int(11),
-    CONSTRAINT `categoria_id` FOREIGN KEY (categoria_id) REFERENCES categorias(`id`),
+    CONSTRAINT `categoria_id` FOREIGN KEY (categoria_id) REFERENCES categorias(`identificador`),
     CONSTRAINT `editora_id` FOREIGN KEY (editora_id) REFERENCES editoras(`id`)
 );
 

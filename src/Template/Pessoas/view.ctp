@@ -62,9 +62,9 @@
                 <td><?= h($funcionarios->contato) ?></td>
                 <td><?= h($funcionarios->pessoa_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Funcionarios', 'action' => 'view', $funcionarios->]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Funcionarios', 'action' => 'edit', $funcionarios->]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Funcionarios', 'action' => 'delete', $funcionarios->], ['confirm' => __('Are you sure you want to delete # {0}?', $funcionarios->)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Funcionarios', 'action' => 'view', $funcionarios->siape]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Funcionarios', 'action' => 'edit', $funcionarios->siape]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Funcionarios', 'action' => 'delete', $funcionarios->siape], ['confirm' => __('Are you sure you want to delete # {0}?', $funcionarios->siape)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

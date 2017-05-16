@@ -13,6 +13,8 @@ use Cake\ORM\Entity;
  * @property string $endereco
  * @property string $contato
  * @property int $id_pessoa
+ *
+ * @property \App\Model\Entity\Pessoa $pessoa
  */
 class Aluno extends Entity
 {

@@ -7,6 +7,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Alunos'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Pessoas'), ['controller' => 'Pessoas', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Pessoa'), ['controller' => 'Pessoas', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="alunos form large-9 medium-8 columns content">
@@ -19,7 +21,7 @@
             echo $this->Form->control('email');
             echo $this->Form->control('endereco');
             echo $this->Form->control('contato');
-            echo $this->Form->control('id_pessoa');
+            echo $this->Form->control('id_pessoa', ['options' => $pessoas, 'empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

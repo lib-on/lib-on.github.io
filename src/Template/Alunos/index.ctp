@@ -7,6 +7,8 @@
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Aluno'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Pessoas'), ['controller' => 'Pessoas', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Pessoa'), ['controller' => 'Pessoas', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="alunos index large-9 medium-8 columns content">
@@ -33,7 +35,7 @@
                 <td><?= h($aluno->email) ?></td>
                 <td><?= h($aluno->endereco) ?></td>
                 <td><?= h($aluno->contato) ?></td>
-                <td><?= $this->Number->format($aluno->id_pessoa) ?></td>
+                <td><?= $aluno->has('pessoa') ? $this->Html->link($aluno->pessoa->id, ['controller' => 'Pessoas', 'action' => 'view', $aluno->pessoa->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $aluno->matricula]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $aluno->matricula]) ?>

@@ -17,6 +17,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('contato') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('endereco') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('email') ?></th>
@@ -27,6 +28,7 @@
             <?php foreach ($editoras as $editora): ?>
             <tr>
                 <td><?= $this->Number->format($editora->id) ?></td>
+                <td><?= h($editora->nome) ?></td>
                 <td><?= h($editora->contato) ?></td>
                 <td><?= h($editora->endereco) ?></td>
                 <td><?= h($editora->email) ?></td>

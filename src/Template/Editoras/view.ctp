@@ -18,6 +18,10 @@
     <h3><?= h($editora->id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Nome') ?></th>
+            <td><?= h($editora->nome) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Contato') ?></th>
             <td><?= h($editora->contato) ?></td>
         </tr>

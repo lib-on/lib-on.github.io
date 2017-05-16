@@ -28,7 +28,6 @@ class AlunosFixture extends TestFixture
             'id_pessoa' => ['type' => 'index', 'columns' => ['id_pessoa'], 'length' => []],
         ],
         '_constraints' => [
-            'primary' => ['type' => 'primary', 'columns' => ['matricula'], 'length' => []],
             'id_pessoa' => ['type' => 'foreign', 'columns' => ['id_pessoa'], 'references' => ['pessoas', 'id'], 'update' => 'restrict', 'delete' => 'restrict', 'length' => []],
         ],
         '_options' => [
@@ -45,7 +44,7 @@ class AlunosFixture extends TestFixture
      */
     public $records = [
         [
-            'matricula' => '514e1e4e-053b-48d7-808f-40db1f24497e',
+            'matricula' => 'Lorem ipsum dolor ',
             'curso' => 'Lorem ipsum dolor sit amet',
             'periodo' => 'Lorem ipsum dolor ',
             'email' => 'Lorem ipsum dolor sit amet',

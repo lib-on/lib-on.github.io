@@ -144,3 +144,662 @@ Stack Trace:
 #15 {main}
 
 
+2017-05-11 01:40:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Alunos.email' in 'where clause'
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/alunos/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(1010): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(959): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(293): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1612): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Rule\IsUnique.php(82): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\IsUnique->__invoke(Object(App\Model\Entity\Aluno), Array)
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\Aluno), Array)
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\Aluno), Array, Array)
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\Aluno), Array)
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\Aluno), 'create', Array)
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1784): Cake\ORM\Table->checkRules(Object(App\Model\Entity\Aluno), 'create', Object(ArrayObject))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Aluno), Object(ArrayObject))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#22 C:\xampp\htdocs\biblioteca\src\Controller\AlunosController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Aluno))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\AlunosController->add()
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#26 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#37 {main}
+
+
+2017-05-11 01:42:35 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Alunos.email' in 'where clause'
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/alunos/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(1010): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(959): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(293): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1612): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Rule\IsUnique.php(82): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\IsUnique->__invoke(Object(App\Model\Entity\Aluno), Array)
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\Aluno), Array)
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\Aluno), Array, Array)
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\Aluno), Array)
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\Aluno), 'create', Array)
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1784): Cake\ORM\Table->checkRules(Object(App\Model\Entity\Aluno), 'create', Object(ArrayObject))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Aluno), Object(ArrayObject))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#22 C:\xampp\htdocs\biblioteca\src\Controller\AlunosController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Aluno))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\AlunosController->add()
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#26 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#37 {main}
+
+
+2017-05-11 01:43:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Alunos.email' in 'where clause'
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/alunos/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(1010): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(959): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(293): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1612): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Rule\IsUnique.php(82): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\IsUnique->__invoke(Object(App\Model\Entity\Aluno), Array)
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\Aluno), Array)
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\Aluno), Array, Array)
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\Aluno), Array)
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\Aluno), 'create', Array)
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1784): Cake\ORM\Table->checkRules(Object(App\Model\Entity\Aluno), 'create', Object(ArrayObject))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Aluno), Object(ArrayObject))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#22 C:\xampp\htdocs\biblioteca\src\Controller\AlunosController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Aluno))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\AlunosController->add()
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#26 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#37 {main}
+
+
+2017-05-11 02:03:35 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php, line 119]
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-11 02:03:35 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php on line 119
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-11 02:06:27 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php, line 119]
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-11 02:06:27 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php on line 119
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-11 02:06:30 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php, line 119]
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-11 02:06:31 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php on line 119
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-11 02:10:57 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php, line 119]
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-11 02:10:57 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php on line 119
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 119)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-11 02:14:27 Error: Fatal Error (1): Call to a member function allow() on boolean in [C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php, line 121]
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-11 02:14:28 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on boolean in C:\xampp\htdocs\biblioteca\src\Controller\FuncionariosController.php on line 121
+Request URL: /funcionarios/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 121)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-14 18:36:23 Error: [RuntimeException] Table "App\Model\Table\AlunosTable" is not associated with "Pessoas"
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\src\Controller\AlunosController.php(64): Cake\ORM\Table->__get('Pessoas')
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\AlunosController->add()
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
+2017-05-15 16:20:23 Error: Fatal Error (1): Maximum execution time of 30 seconds exceeded in [C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php, line 48]
+Request URL: /pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-15 16:20:29 Error: [Cake\Error\FatalErrorException] Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php on line 48
+Request URL: /pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Maximum executi...', 'C:\\xampp\\htdocs...', 48)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-15 16:22:09 Error: [Cake\View\Exception\MissingHelperException] Helper class id AS `Pessoas__id` FROM pessoas Pessoas LIMIT 200Helper could not be found.
+Exception Attributes: array (
+  'class' => 'id AS `Pessoas__id` FROM pessoas Pessoas LIMIT 200Helper',
+  'plugin' => 'SELECT Pessoas',
+)
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('id AS `Pessoas_...', 'SELECT Pessoas')
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\View\HelperRegistry.php(67): Cake\Core\ObjectRegistry->load('SELECT Pessoas....')
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\View\View.php(904): Cake\View\HelperRegistry->__isset('SELECT Pessoas....')
+#3 C:\xampp\htdocs\biblioteca\src\Template\Alunos\add.ctp(17): Cake\View\View->__get('SELECT Pessoas....')
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\View\View.php(1011): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\View\View.php(972): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\View\View.php(596): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(623): Cake\View\View->render(NULL, NULL)
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#21 {main}
+
+
+2017-05-15 16:23:07 Error: Fatal Error (1): Call to a member function control() on null in [C:\xampp\htdocs\biblioteca\src\Template\Alunos\add.ctp, line 17]
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-15 16:23:08 Error: [Cake\Error\FatalErrorException] Call to a member function control() on null in C:\xampp\htdocs\biblioteca\src\Template\Alunos\add.ctp on line 17
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-15 16:23:23 Error: Fatal Error (4): syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\xampp\htdocs\biblioteca\src\Template\Alunos\add.ctp, line 17]
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-15 16:23:23 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ']', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in C:\xampp\htdocs\biblioteca\src\Template\Alunos\add.ctp on line 17
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/pessoas
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 17)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2017-05-15 16:24:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Alunos.username' in 'where clause'
+Request URL: /alunos/add
+Referer URL: http://localhost/biblioteca/alunos/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(1010): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(276): Cake\ORM\Query->_execute()
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Query.php(959): Cake\ORM\Query->_all()
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(293): Cake\ORM\Query->all()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1612): Cake\ORM\Query->toArray()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Rule\IsUnique.php(82): Cake\ORM\Table->exists(Array)
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RuleInvoker.php(115): Cake\ORM\Rule\IsUnique->__invoke(Object(App\Model\Entity\Aluno), Array)
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(298): Cake\Datasource\RuleInvoker->__invoke(Object(App\Model\Entity\Aluno), Array)
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(255): Cake\Datasource\RulesChecker->_checkRules(Object(App\Model\Entity\Aluno), Array, Array)
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesChecker.php(231): Cake\Datasource\RulesChecker->checkCreate(Object(App\Model\Entity\Aluno), Array)
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Datasource\RulesAwareTrait.php(66): Cake\Datasource\RulesChecker->check(Object(App\Model\Entity\Aluno), 'create', Array)
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1784): Cake\ORM\Table->checkRules(Object(App\Model\Entity\Aluno), 'create', Object(ArrayObject))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Aluno), Object(ArrayObject))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#22 C:\xampp\htdocs\biblioteca\src\Controller\AlunosController.php(57): Cake\ORM\Table->save(Object(App\Model\Entity\Aluno))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\AlunosController->add()
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\AlunosController))
+#26 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#37 {main}
+
+
+2017-05-15 16:31:43 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1916): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#12 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-05-15 16:32:42 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1916): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#12 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-05-15 16:34:09 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1916): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#12 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-05-15 16:35:59 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1916): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#12 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-05-15 16:38:14 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(39): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(174): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(313): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Query.php(213): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1916): Cake\Database\Query->execute()
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#8 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#12 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#27 {main}
+
+
+2017-05-15 16:57:04 Error: [InvalidArgumentException] Unknown type ""
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1953): Cake\Database\Type::build(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1885): Cake\ORM\Table->_newId(Array)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#8 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-05-16 02:58:57 Error: [InvalidArgumentException] Unknown type ""
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1953): Cake\Database\Type::build(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1885): Cake\ORM\Table->_newId(Array)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#8 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-05-16 02:59:14 Error: [InvalidArgumentException] Unknown type ""
+Request URL: /categorias/add
+Referer URL: http://localhost/biblioteca/categorias/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1953): Cake\Database\Type::build(NULL)
+#1 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1885): Cake\ORM\Table->_newId(Array)
+#2 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1810): Cake\ORM\Table->_insert(Object(App\Model\Entity\Categoria), Array)
+#3 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1723): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Categoria), Object(ArrayObject))
+#4 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1446): Cake\ORM\Table->Cake\ORM\{closure}()
+#5 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Database\Connection.php(680): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#6 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1447): Cake\Database\Connection->transactional(Object(Closure))
+#7 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\ORM\Table.php(1724): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#8 C:\xampp\htdocs\biblioteca\src\Controller\CategoriasController.php(54): Cake\ORM\Table->save(Object(App\Model\Entity\Categoria))
+#9 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Controller\Controller.php(440): App\Controller\CategoriasController->add()
+#10 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(119): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\CategoriasController))
+#12 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Http\Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 C:\xampp\htdocs\biblioteca\webroot\index.php(37): Cake\Http\Server->run()
+#23 {main}
+
+
+2017-05-16 03:19:24 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\biblioteca\src\Template\Editoras\add.ctp, line 38]
+Request URL: /editoras/add
+Referer URL: http://localhost/biblioteca/livros/add
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 223
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 105
+[main] - [internal], line ??
+
+
+
+2017-05-16 03:19:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW) in C:\xampp\htdocs\biblioteca\src\Template\Editoras\add.ctp on line 38
+Request URL: /editoras/add
+Referer URL: http://localhost/biblioteca/livros/add
+Stack Trace:
+#0 C:\xampp\htdocs\biblioteca\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(105): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 38)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
