@@ -8,7 +8,8 @@
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Pessoa'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Funcionarios'), ['controller' => 'Funcionarios', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Funcionario'), ['controller' => 'Funcionarios', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Cadastrar Funcionário'), ['controller' => 'Funcionarios', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Cadastrar Aluno'), ['controller' => 'Alunos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="pessoas index large-9 medium-8 columns content">

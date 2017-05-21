@@ -33,6 +33,9 @@ class AlunosTable extends Table
         $this->setTable('alunos');
         $this->setDisplayField('matricula');
         $this->setPrimaryKey('matricula');
+        $this->belongsTo('Pessoas', [
+            'foreignKey' => 'id_pessoa'
+        ]);
     }
 
     /**

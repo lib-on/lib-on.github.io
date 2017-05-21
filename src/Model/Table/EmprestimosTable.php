@@ -33,6 +33,8 @@ class EmprestimosTable extends Table
         parent::initialize($config);
 
         $this->setTable('emprestimos');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->belongsTo('Livros', [
             'foreignKey' => 'livro_id',
@@ -48,6 +50,10 @@ class EmprestimosTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
         $validator
             ->integer('id_usuario')
             ->requirePresence('id_usuario', 'create')

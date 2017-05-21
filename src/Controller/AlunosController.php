@@ -16,6 +16,17 @@ class AlunosController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
+
+    public function initialize(){
+
+        parent::initialize();
+
+        $this->loadComponent('Flash');
+
+        $this->loadModel('Pessoas');
+
+    }
+
     public function index()
     {
         $this->paginate = [
@@ -52,8 +63,15 @@ class AlunosController extends AppController
     public function add()
     {
         $aluno = $this->Alunos->newEntity();
+        $pessoa = $this->Pessoas->newEntity();
+
+
+
         if ($this->request->is('post')) {
             $aluno = $this->Alunos->patchEntity($aluno, $this->request->getData());
+            $pessoa = $this->Pessoas->patchEntity($pessoa, $this->request->getData());
+            $this->request->data()['Pessoas']['nome'] = $this->request->data()['Alunos']['nome'];
+            $this->Pessoas->save($this->request->data);
             if ($this->Alunos->save($aluno)) {
                 $this->Flash->success(__('The aluno has been saved.'));
 

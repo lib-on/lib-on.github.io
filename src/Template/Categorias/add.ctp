@@ -18,8 +18,6 @@
         <?php
             echo $this->Form->control('identificador');
             echo $this->Form->control('descricao');
-
-            debug($this->Form->create($categoria));
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
