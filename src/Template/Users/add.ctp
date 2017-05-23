@@ -20,9 +20,10 @@
             echo $this->Form->control('username');
             echo $this->Form->control('password');
             echo $this->Form->control('role', [
-'options' => ['Student' => 'Aluno', 'Employee' =>
-'Administrador', 'Teacher' => 'Professor',
-'Librarian' => 'bibliotecária'] ]);
+                                    'options' => ['Students' => 'Aluno',
+                                        'Employee' => 'Administrador',
+                                        'Teacher' => 'Professor',
+                                        'Librarian' => 'bibliotecária'] ]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

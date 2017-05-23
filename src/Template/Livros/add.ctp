@@ -24,7 +24,7 @@
             echo $this->Form->control('isbn');
             echo $this->Form->control('edicao');
             echo $this->Form->control('autor');
-            echo $this->Form->control('categoria_id', ['options' => $categorias]);
+            echo $this->Form->control('categoria_id', ['options' => $categorias, ]);
             echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true]);
         ?>
     </fieldset>
