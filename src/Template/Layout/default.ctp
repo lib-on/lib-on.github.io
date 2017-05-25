@@ -26,8 +26,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!-- <?= $this->Html->css('base.css') ?> -->
+    <!-- <?= $this->Html->css('cake.css') ?> -->
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('bootstrap.css') ?>
     <?= $this->Html->css('bootstrap-theme.css') ?>
@@ -38,14 +38,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-default" data-topbar role="navigation">
+    <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
         <div class="container-fluid">
-            <div class="navbar-header">
-                <ul class="btn btn-default" style="text-decoration: none;">
-                    <li class="">
-                        <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-                    </li>
-                </ul>
+            <div class="nav navbar-nav navbar-right menu-items">
+                <h3><a href=""><?= $this->fetch('title') ?></a></h3>            
             </div>
             
         </div>
@@ -58,7 +54,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </nav>
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    <div class="content">
         <?= $this->fetch('content') ?>
     </div>
     <footer>

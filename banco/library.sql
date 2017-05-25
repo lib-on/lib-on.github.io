@@ -36,7 +36,7 @@ CREATE TABLE editoras(
 );
 
 CREATE TABLE categorias(
-    id int(4) not null PRIMARY KEY,
+    id int(4) not null PRIMARY KEY AUTO_INCREMENT,
     identificador int(4) not null,
     descricao varchar(100)
 );

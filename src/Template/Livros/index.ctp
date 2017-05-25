@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+use Cake\ORM\TableRegistry;
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -15,6 +16,11 @@
         <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+    <?php 
+        $categories = TableRegistry::get('Categorias');
+        $queryCategories = $categories->find();
+        $identificator = $queryCategories->select('identificador')->where('id');
+     ?>
 <div class="livros index large-9 medium-8 columns content">
     <h3><?= __('Livros') ?></h3>
     <table cellpadding="0" cellspacing="0">

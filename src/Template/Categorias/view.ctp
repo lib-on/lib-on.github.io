@@ -22,6 +22,10 @@
             <td><?= h($categoria->descricao) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($categoria->id) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Identificador') ?></th>
             <td><?= $this->Number->format($categoria->identificador) ?></td>
         </tr>
