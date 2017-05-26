@@ -19,7 +19,7 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
-            <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->id, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
+            <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Quantidade') ?></th>

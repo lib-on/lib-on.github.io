@@ -23,7 +23,7 @@ use Cake\ORM\TableRegistry;
      ?>
 <div class="livros index large-9 medium-8 columns content">
     <h3><?= __('Livros') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -44,8 +44,8 @@ use Cake\ORM\TableRegistry;
                 <td><?= h($livro->isbn) ?></td>
                 <td><?= h($livro->edicao) ?></td>
                 <td><?= h($livro->autor) ?></td>
-                <td><?= $livro->has('categoria') ? $this->Html->link($livro->categoria->id, ['controller' => 'Categorias', 'action' => 'view', $livro->categoria->id]) : '' ?></td>
-                <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->id, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
+                <td><?= $livro->has('categoria') ? $this->Html->link($livro->categoria->identificador, ['controller' => 'Categorias', 'action' => 'view', $livro->categoria->id]) : '' ?></td>
+                <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $livro->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livro->id]) ?>

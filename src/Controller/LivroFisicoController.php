@@ -55,13 +55,18 @@ class LivroFisicoController extends AppController
         if ($this->request->is('post')) {
             $livroFisico = $this->LivroFisico->patchEntity($livroFisico, $this->request->getData());
             if ($this->LivroFisico->save($livroFisico)) {
-                $this->Flash->success(__('The livro fisico has been saved.'));
+                $this->Flash->success(__('O livro fisico foi salvo.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The livro fisico could not be saved. Please, try again.'));
+            $this->Flash->error(__('O livro fisico não pôde ser salvo. Por favor, tente novamente.'));
         }
-        $livros = $this->LivroFisico->Livros->find('list', ['limit' => 200]);
+        $livros = $this->LivroFisico->Livros->find('list', [                
+                'keyField' => 'id',
+                'valueField' => function ($row) {
+                    return $row['titulo'] . ' - ' . $row['autor'];
+        }
+            ]);
         $this->set(compact('livroFisico', 'livros'));
         $this->set('_serialize', ['livroFisico']);
     }

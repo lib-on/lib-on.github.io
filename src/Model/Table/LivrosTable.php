@@ -35,7 +35,7 @@ class LivrosTable extends Table
         parent::initialize($config);
 
         $this->setTable('livros');
-        $this->setDisplayField('id');
+        $this->setDisplayField('identificador');
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Categorias', [
@@ -48,7 +48,7 @@ class LivrosTable extends Table
         $this->hasMany('Emprestimos', [
             'foreignKey' => 'livro_id'
         ]);
-        
+
     }
 
     /**

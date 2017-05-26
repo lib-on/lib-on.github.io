@@ -26,7 +26,7 @@
         <tbody>
             <?php foreach ($livroFisico as $livroFisico): ?>
             <tr>
-                <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->id, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
+                <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
                 <td><?= h($livroFisico->alugado) ?></td>
                 <td><?= $this->Number->format($livroFisico->quantidade) ?></td>
                 <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>

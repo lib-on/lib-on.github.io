@@ -64,8 +64,16 @@ class LivrosController extends AppController
             }
             $this->Flash->error(__('The livro could not be saved. Please, try again.'));
         }
-        $categorias = $this->Livros->Categorias->find('list', ['limit' => 200]);
-        $editoras = $this->Livros->Editoras->find('list', ['limit' => 200]);
+        $categorias = $this->Livros->Categorias->find('list', [
+                'keyField' => 'id',
+                'valueField' => function ($row) {
+            return $row['identificador'] . ' - ' . $row['descricao'];
+        }
+        ]);
+        $editoras = $this->Livros->Editoras->find('list', [
+                'keyField' => 'id',
+                'valueField' => 'nome'
+        ]);
         $this->set(compact('livro', 'categorias', 'editoras'));
         $this->set('_serialize', ['livro']);
     }

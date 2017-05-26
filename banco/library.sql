@@ -57,7 +57,7 @@ CREATE TABLE livro_fisico(
     livros_id int(11) not null,
     alugado boolean not null,
     quantidade int(11) not null,
-    codigo_livro int(10) not null PRIMARY KEY,
+    codigo_livro varchar(14) not null PRIMARY KEY,
     CONSTRAINT `livros_id` FOREIGN KEY (livros_id) REFERENCES livros(`id`)
 );
 
