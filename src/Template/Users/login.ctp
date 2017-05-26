@@ -1,3 +1,6 @@
+<?php 
+	use Cake\View\Helper\HtmlHelper;
+ ?>
 <div class="users form">
 <?= $this->Flash->render('auth') ?>
 <?= $this->Form->create() ?>

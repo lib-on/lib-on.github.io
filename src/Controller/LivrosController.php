@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Livros Controller
@@ -49,8 +50,10 @@ class LivrosController extends AppController
      *
      * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {
+    public function add(){
+
+        $categorias = TableRegistry::get('Categorias')->find();
+
         $livro = $this->Livros->newEntity();
         if ($this->request->is('post')) {
             $livro = $this->Livros->patchEntity($livro, $this->request->getData());

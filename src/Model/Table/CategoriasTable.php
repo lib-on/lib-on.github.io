@@ -4,6 +4,7 @@ namespace App\Model\Table;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
+use Cake\ORM\TableRegistry;
 use Cake\Validation\Validator;
 
 /**
@@ -62,5 +63,12 @@ class CategoriasTable extends Table
             ->allowEmpty('descricao');
 
         return $validator;
+    }
+
+    public function saveCategorias(){
+
+        $categories = TableRegistry::get('Categorias');
+        $queryCategories = $categories->find();
+        $identificator = $queryCategories->select('id')->where('identificador');     
     }
 }

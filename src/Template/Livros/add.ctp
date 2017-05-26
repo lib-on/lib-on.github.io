@@ -18,27 +18,15 @@ use Cake\ORM\TableRegistry;
 </nav>
 <div class="form">
     <?= $this->Form->create($livro) ?>
-    <?php 
-        $categories = TableRegistry::get('Categorias');
-        $queryCategories = $categories->find();
-        $identificator = $queryCategories->select('id')->where('identificador');
-        // foreach ($query as $categories) {
-        //     debug($categories->identificador);
-        // }
-        $editors = TableRegistry::get('Editoras');
-        $queryEditors = $editors->find();
-        $editorsName = $queryEditors->select('nome')->where('id');
-        debug($identificator);   
-     ?>
     <fieldset>
-        <legend><?= __('Add Livro') ?></legend>
+        <legend><?= __('Adicionar Livro') ?></legend>
         <?php
 
             echo $this->Form->control('titulo', ['class' => 'form-control']);
             echo $this->Form->control('isbn', ['class' => 'form-control']);
             echo $this->Form->control('edicao', ['class' => 'form-control']);
             echo $this->Form->control('autor', ['class' => 'form-control']);
-            echo $this->Form->control('categoria_id', ['options' => $identificator, 'empty' => true, 'class' => 'form-control']);
+            echo $this->Form->control('categoria_id', ['options' => $categorias, 'empty' => true, 'class' => 'form-control']);
             echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control']);
            //debug($identificator);
         ?>

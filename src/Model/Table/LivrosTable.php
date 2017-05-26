@@ -48,6 +48,7 @@ class LivrosTable extends Table
         $this->hasMany('Emprestimos', [
             'foreignKey' => 'livro_id'
         ]);
+        
     }
 
     /**
