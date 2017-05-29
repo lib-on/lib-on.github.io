@@ -21,7 +21,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <?= $cakeDescription ?>:
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
@@ -39,14 +38,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
-        <div class="container-fluid">
-            <div class="nav navbar-nav navbar-right menu-items">
-                <h3><a href=""><?= $this->fetch('title') ?></a></h3>            
+        <div class="container-fluid navbar-default">
+            <div class="nav navbar-nav navbar-left menu-items">
+                <a class="navbar-brand"><?= $this->fetch('title') ?></a>
             </div>
             
         </div>
         
-        <div class="top-bar-section">
+        <div class="container-fluid navbar-default">
             <!-- <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
