@@ -14,9 +14,9 @@
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="emprestimos view large-9 medium-8 columns content">
+<div class="emprestimos view col-md-offset-0 columns content">
     <h3><?= h($emprestimo->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-hover">
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
             <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>

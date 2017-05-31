@@ -11,9 +11,9 @@
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="categorias index large-9 medium-8 columns content">
+<div class="col-sm-12 col-md-12">
     <h3><?= __('Categorias') ?></h3>
-    <table cellpadding="0" cellspacing="0" class="table table-bordered">
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -29,9 +29,9 @@
                 <td><?= $this->Number->format($categoria->identificador) ?></td>
                 <td><?= h($categoria->descricao) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $categoria->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $categoria->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $categoria->id], ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $categoria->id], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $categoria->id], ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $categoria->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

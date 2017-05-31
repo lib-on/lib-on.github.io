@@ -22,11 +22,11 @@
     <fieldset>
         <legend><?= __('Edit Emprestimo') ?></legend>
         <?php
-            echo $this->Form->control('livro_id', ['options' => $livros]);
-            echo $this->Form->control('id_usuario');
-            echo $this->Form->control('codigo_livros');
+            echo $this->Form->control('livro_id', ['options' => $livros, 'class' => 'form-control']);
+            echo $this->Form->control('id_usuario', ['class' => 'form-control']);
+            echo $this->Form->control('codigo_livros', ['class' => 'form-control']);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>

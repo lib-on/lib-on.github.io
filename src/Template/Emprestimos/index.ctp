@@ -31,9 +31,9 @@
                 <td><?= $this->Number->format($emprestimo->id_usuario) ?></td>
                 <td><?= $this->Number->format($emprestimo->codigo_livros) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $emprestimo->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $emprestimo->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $emprestimo->id], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $emprestimo->id], ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

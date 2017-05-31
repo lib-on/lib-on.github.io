@@ -22,11 +22,11 @@
     <fieldset>
         <legend><?= __('Edit Livro Fisico') ?></legend>
         <?php
-            echo $this->Form->control('livros_id', ['options' => $livros]);
+            echo $this->Form->control('livros_id', ['options' => $livros, 'class' => 'form-control']);
             echo $this->Form->control('alugado');
-            echo $this->Form->control('quantidade');
+            echo $this->Form->control('quantidade', ['class' => 'form-control']);
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset><br>
+    <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>

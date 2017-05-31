@@ -14,9 +14,9 @@
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="editoras view large-9 medium-8 columns content">
+<div class="editoras view col-md-offset-0 columns content">
     <h3><?= h($editora->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-hover">
         <tr>
             <th scope="row"><?= __('Nome') ?></th>
             <td><?= h($editora->nome) ?></td>
@@ -41,7 +41,7 @@
     <div class="related">
         <h4><?= __('Related Livros') ?></h4>
         <?php if (!empty($editora->livros)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table  class="table table-bordered">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Titulo') ?></th>
@@ -62,9 +62,9 @@
                 <td><?= h($livros->categoria_id) ?></td>
                 <td><?= h($livros->editora_id) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Livros', 'action' => 'view', $livros->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Livros', 'action' => 'edit', $livros->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

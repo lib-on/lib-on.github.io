@@ -16,12 +16,12 @@
     <fieldset>
         <legend><?= __('Add Editora') ?></legend>
         <?php
-            echo $this->Form->control('nome');
-            echo $this->Form->control('contato');
-            echo $this->Form->control('endereco');
-            echo $this->Form->control('email');
+            echo $this->Form->control('nome', ['class' => 'form-control']);
+            echo $this->Form->control('contato', ['class' => 'form-control']);
+            echo $this->Form->control('endereco', ['class' => 'form-control']);
+            echo $this->Form->control('email', ['class' => 'form-control']);
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset><br>
+    <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>

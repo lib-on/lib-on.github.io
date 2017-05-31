@@ -31,9 +31,9 @@
                 <td><?= $this->Number->format($livroFisico->quantidade) ?></td>
                 <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->codigo_livro]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->codigo_livro]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livroFisico->codigo_livro], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->codigo_livro)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->codigo_livro], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->codigo_livro], ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livroFisico->codigo_livro], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->codigo_livro)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

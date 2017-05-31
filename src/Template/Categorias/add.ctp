@@ -16,10 +16,10 @@
     <fieldset>
         <legend><?= __('Add Categoria') ?></legend>
         <?php
-            echo $this->Form->control('identificador');
-            echo $this->Form->control('descricao');
+            echo $this->Form->control('identificador', ['class' => 'form-control']);
+            echo $this->Form->control('descricao', ['class' => 'form-control']);
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset><br>
+    <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>

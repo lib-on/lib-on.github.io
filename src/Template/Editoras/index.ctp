@@ -33,9 +33,9 @@
                 <td><?= h($editora->endereco) ?></td>
                 <td><?= h($editora->email) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $editora->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $editora->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $editora->id], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $editora->id], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $editora->id], ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $editora->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

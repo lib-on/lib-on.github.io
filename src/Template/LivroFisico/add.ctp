@@ -16,12 +16,12 @@
     <fieldset>
         <legend><?= __('Add Livro Fisico') ?></legend>
         <?php
-            echo $this->Form->control('livros_id', ['options' => $livros]);
-            echo $this->Form->control('codigo_livro', ['type' => 'text']);
-            echo $this->Form->control('quantidade');
+            echo $this->Form->control('livros_id', ['options' => $livros, 'class' => 'form-control']);
+            echo $this->Form->control('codigo_livro', ['type' => 'text', 'class' => 'form-control']);
+            echo $this->Form->control('quantidade',['class' => 'form-control']);
             //echo $this->Form->control('alugado');
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset><br>
+    <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>

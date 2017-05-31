@@ -14,9 +14,9 @@
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="livroFisico view large-9 medium-8 columns content">
+<div class="livroFisico view col-md-offset-0 columns content">
     <h3><?= h($livroFisico->codigo_livro) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-hover">
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
             <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
