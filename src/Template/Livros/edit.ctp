@@ -21,19 +21,21 @@
         <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="livros form large-9 medium-8 columns content">
+
+<div class="form-group col-8 columns content">
     <?= $this->Form->create($livro) ?>
     <fieldset>
         <legend><?= __('Edit Livro') ?></legend>
         <?php
-            echo $this->Form->control('titulo');
-            echo $this->Form->control('isbn');
-            echo $this->Form->control('edicao');
-            echo $this->Form->control('autor');
-            echo $this->Form->control('categoria_id', ['options' => $categorias]);
-            echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true]);
+            echo $this->Form->control('titulo', ['class' => 'form-control']);
+            echo $this->Form->control('isbn', ['class' => 'form-control']);
+            echo $this->Form->control('edicao', ['class' => 'form-control']);
+            echo $this->Form->control('autor', ['class' => 'form-control']);
+            echo $this->Form->control('categoria_id', ['options' => $categorias, 'class' => 'form-control']);
+            echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control']);
         ?>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    </fieldset><br>
+    <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']); ?>
     <?= $this->Form->end() ?>
 </div>
+

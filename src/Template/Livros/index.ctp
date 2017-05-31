@@ -7,7 +7,7 @@ use Cake\ORM\TableRegistry;
 <div class="container-fluid">
     <div class="row content">
         
-        <div class="col-sm-3 sidenav" id="actions-sidebar">
+        <div class="col-sm-8 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
                 <li class="heading"><?= __('Actions') ?></li>
                 <li><?= $this->Html->link(__('New Livro'), ['action' => 'add']) ?></li>
@@ -24,11 +24,11 @@ use Cake\ORM\TableRegistry;
         $queryCategories = $categories->find();
         $identificator = $queryCategories->select('identificador')->where('id');
      ?>
-        <div class="col-sm-9">
-            <h3><?= __('Livros') ?></h3>
-            <table cellpadding="0" cellspacing="0" class="table table-bordered">
+        <div class="col-sm-12 col-md-12">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
+            <h3><?= __('Livros') ?></h3>
                         <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('isbn') ?></th>
@@ -50,9 +50,9 @@ use Cake\ORM\TableRegistry;
                         <td><?= $livro->has('categoria') ? $this->Html->link($livro->categoria->identificador, ['controller' => 'Categorias', 'action' => 'view', $livro->categoria->id]) : '' ?></td>
                         <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $livro->id]) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livro->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
+                            <?= $this->Html->link(__('View'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

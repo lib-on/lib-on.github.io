@@ -18,9 +18,9 @@
         <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
-<div class="livros view large-9 medium-8 columns content">
-    <h3><?= h($livro->id) ?></h3>
-    <table class="vertical-table">
+<div class="livros view col-md-offset-0 content">
+    <h3><?= h($livro->id) ?></h3> 
+    <table class="table table-hover">
         <tr>
             <th scope="row"><?= __('Titulo') ?></th>
             <td><?= h($livro->titulo) ?></td>
@@ -66,13 +66,13 @@
                 <td><?= h($emprestimos->id_usuario) ?></td>
                 <td><?= h($emprestimos->codigo_livros) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos->]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos->]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos->], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimos->)]) ?>
+                    <?= $this->Html->link(__('View'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos]) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimos)]) ?>
                 </td>
             </tr>
-            <?php endforeach; ?>
+           <?php endforeach; ?> 
         </table>
-        <?php endif; ?>
+       <?php endif; ?>
     </div>
 </div>

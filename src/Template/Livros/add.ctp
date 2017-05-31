@@ -31,6 +31,6 @@ use Cake\ORM\TableRegistry;
            //debug($identificator);
         ?>
     </fieldset><br>
-    <?= $this->Form->button(__('Submit'), ['class' => 'btn btn-default']) ?>
+    <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
