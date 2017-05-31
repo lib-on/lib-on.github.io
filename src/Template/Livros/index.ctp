@@ -6,8 +6,7 @@ use Cake\ORM\TableRegistry;
 ?>
 <div class="container-fluid">
     <div class="row content">
-        
-        <div class="col-sm-8 sidenav" id="actions-sidebar">
+        <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
                 <li class="heading"><?= __('Actions') ?></li>
                 <li><?= $this->Html->link(__('New Livro'), ['action' => 'add']) ?></li>
@@ -24,7 +23,7 @@ use Cake\ORM\TableRegistry;
         $queryCategories = $categories->find();
         $identificator = $queryCategories->select('identificador')->where('id');
      ?>
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-9">
             <table class="table table-bordered">
                 <thead>
                     <tr>
