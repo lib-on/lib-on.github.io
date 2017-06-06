@@ -8,7 +8,7 @@ use Cake\ORM\TableRegistry;
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('List Livros'), ['action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>

@@ -7,7 +7,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('New Categoria'), ['action' => 'add']) ?></li>
                 <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
                 <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>

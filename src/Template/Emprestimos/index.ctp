@@ -5,7 +5,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <!-- <li class="heading"><?= __('Actions') ?></li> -->
         <li><?= $this->Html->link(__('New Emprestimo'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>

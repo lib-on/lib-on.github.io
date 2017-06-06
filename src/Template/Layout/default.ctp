@@ -41,19 +41,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         
     </div>
     <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
-        <div class="container-fluid navbar-default">
+       <!--  <div class="container-fluid navbar-default">
             <div class="nav navbar-nav navbar-left menu-items">
                 <a class="navbar-brand"><?= $this->fetch('title') ?></a>
             </div>
             
-        </div>
-        
-        <div class="container-fluid navbar-default">
+        </div> -->
+        <!-- <div class="container-fluid navbar-default"> -->
             <!-- <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
             </ul> -->
-        </div>
+        <!-- </div> -->
     </nav>
     <?= $this->Flash->render() ?>
     <div class="content">

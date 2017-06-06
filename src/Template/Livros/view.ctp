@@ -7,7 +7,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('Edit Livro'), ['action' => 'edit', $livro->id]) ?> </li>
                 <li><?= $this->Form->postLink(__('Delete Livro'), ['action' => 'delete', $livro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?> </li>
                 <li><?= $this->Html->link(__('List Livros'), ['action' => 'index']) ?> </li>
