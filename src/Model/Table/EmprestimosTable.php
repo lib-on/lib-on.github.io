@@ -63,6 +63,16 @@ class EmprestimosTable extends Table
             ->integer('codigo_livros')
             ->allowEmpty('codigo_livros');
 
+        $validator
+            ->date('entrega')
+            ->requirePresence('entrega', 'create')
+            ->notEmpty('entrega');
+
+        $validator
+            ->date('data_emprestimo')
+            ->requirePresence('data_emprestimo', 'create')
+            ->notEmpty('data_emprestimo');
+
         return $validator;
     }
 

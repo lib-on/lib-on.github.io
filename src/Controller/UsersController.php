@@ -17,12 +17,19 @@ class UsersController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
+
     public function index()
     {
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
         $this->set('_serialize', ['users']);
+        // $this->messageFlash(__('Normal message.', true),'message');
+        // $this->messageFlash(__('Info message.', true),'alert alert-info');
+        // $this->messageFlash(__('Success message.', true),'alert alert-success');
+        // $this->messageFlash(__('Warning message.', true),'alert alert-warning');
+        // $this->messageFlash(__('Error message.', true),'alert alert-error');
+        // $this->set('posts',$this->paginate());
     }
 
     /**
@@ -53,9 +60,8 @@ class UsersController extends AppController
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {
-                $this->Flash->success(__('The user has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
+                $this->Flash->success('Usuário cadastrado com sucesso!');
+                return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
         }

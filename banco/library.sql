@@ -109,7 +109,7 @@ CREATE TABLE `livro_fisico` (
   `livros_id` int(11) NOT NULL,
   `alugado` tinyint(1) NOT NULL,
   `quantidade` int(11) NOT NULL,
-  `codigo_livro` int(10) NOT NULL,
+  `codigo_livro` int(10) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`codigo_livro`),
   KEY `livros_id` (`livros_id`),
   CONSTRAINT `livros_id` FOREIGN KEY (`livros_id`) REFERENCES `livros` (`id`)

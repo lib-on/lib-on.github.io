@@ -37,6 +37,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
+    <div class="message">
+        
+    </div>
     <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
         <div class="container-fluid navbar-default">
             <div class="nav navbar-nav navbar-left menu-items">

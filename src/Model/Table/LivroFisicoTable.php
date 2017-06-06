@@ -64,6 +64,10 @@ class LivroFisicoTable extends Table
             ->integer('codigo_livro')
             ->allowEmpty('codigo_livro', 'create');
 
+        $validator
+            ->requirePresence('identificador', 'create')
+            ->notEmpty('identificador');
+
         return $validator;
     }
 

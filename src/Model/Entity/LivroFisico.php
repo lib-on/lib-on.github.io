@@ -10,6 +10,7 @@ use Cake\ORM\Entity;
  * @property bool $alugado
  * @property int $quantidade
  * @property int $codigo_livro
+ * @property string $identificador
  *
  * @property \App\Model\Entity\Livro $livro
  */

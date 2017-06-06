@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+    echo $this->Flash->render('positive')
 ?>
 <div class="container-fluid" id="actions-sidebar">
     <div class="row content">

@@ -81,4 +81,15 @@ class AppController extends Controller
         // }
         return false;
     }
+
+    // function messageFlash($message, $type='message') {
+    //     $messages = (array)$this->Session->read('Message.multiFlash');
+    //     $messages[] = array(
+    //         'message'=>$message, 
+    //         'layout'=>'default', 
+    //         'element'=>'default',
+    //         'params'=>array('class'=>$type),
+    //     );
+    //     $this->Session->write('Message.multiFlash', $messages);
+    // }
 }

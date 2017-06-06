@@ -11,6 +11,7 @@
                 <li><?= $this->Html->link(__('Cadastrar usuário'), ['action' => 'add']) ?></li>
             </ul>
         </div>
+        
         <div class="col-sm-9">
             <h3><?= __('Usuários') ?></h3>
             <table cellpadding="0" cellspacing="0" class="table table-bordered">
