@@ -19,8 +19,8 @@
             echo $this->Form->control('livro_id', ['options' => $livros]);
             echo $this->Form->control('id_usuario', ['options' => $users]);
             echo $this->Form->control('codigo_livros', ['options' => $acervo]);
-            echo $this->Form->control('entrega');
-            echo $this->Form->control('data_emprestimo');
+            echo $this->Form->control('entrega', ['placeholder' => 'Digite data de entrega']);
+            echo $this->Form->control('data_emprestimo', ['placeholder' => 'Digite data de emprestimo']);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

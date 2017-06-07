@@ -18,8 +18,8 @@
             <fieldset>
                 <legend><?= __('Add Categoria') ?></legend>
                 <?php
-                    echo $this->Form->control('identificador', ['class' => 'form-control']);
-                    echo $this->Form->control('descricao', ['class' => 'form-control']);
+                    echo $this->Form->control('identificador', ['class' => 'form-control', 'placeholder' => 'Selecione o identificador']);
+                    echo $this->Form->control('descricao', ['class' => 'form-control', 'placeholder' => 'Digite a descrição']);
                 ?>
             </fieldset><br>
             <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>

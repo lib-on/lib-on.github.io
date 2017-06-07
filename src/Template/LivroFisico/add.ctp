@@ -20,8 +20,8 @@
                     <?php
                         echo $this->Form->control('livros_id', ['options' => $livros, 'class' => 'form-control']);
                         // echo $this->Form->control('alugado', ['class' => '']);
-                        echo $this->Form->control('quantidade', ['class' => 'form-control']);
-                        echo $this->Form->control('identificador', ['class' => 'form-control']);
+                        echo $this->Form->control('quantidade', ['class' => 'form-control', 'placeholder' => 'Digite quantidade']);
+                        echo $this->Form->control('identificador', ['class' => 'form-control' , 'placeholder' => 'Digite identificador']);
                     ?>
                 </fieldset>
                 <?= $this->Form->button(__('Submit'),['class' => 'col-md-offset-11 col-md-1 btn btn-primary']) ?>

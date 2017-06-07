@@ -24,10 +24,10 @@ use Cake\ORM\TableRegistry;
                 <legend><?= __('Adicionar Livro') ?></legend>
                 <?php
 
-                    echo $this->Form->control('titulo', ['class' => 'form-control']);
-                    echo $this->Form->control('isbn', ['class' => 'form-control']);
-                    echo $this->Form->control('edicao', ['class' => 'form-control']);
-                    echo $this->Form->control('autor', ['class' => 'form-control']);
+                    echo $this->Form->control('titulo', ['class' => 'form-control', 'placeholder' => 'Digite titulo do livro']);
+                    echo $this->Form->control('isbn', ['class' => 'form-control', 'placeholder' => 'Digite isbn']);
+                    echo $this->Form->control('edicao', ['class' => 'form-control', 'placeholder' => 'Digite edição']);
+                    echo $this->Form->control('autor', ['class' => 'form-control', 'placeholder' => 'Digite autor']);
                     echo $this->Form->control('categoria_id', ['options' => $categorias, 'empty' => true, 'class' => 'form-control']);
                     echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control']);
                    //debug($identificator);

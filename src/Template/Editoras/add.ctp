@@ -18,10 +18,10 @@
             <fieldset>
                 <legend><?= __('Add Editora') ?></legend>
                 <?php
-                    echo $this->Form->control('nome', ['class' => 'form-control']);
-                    echo $this->Form->control('contato', ['class' => 'form-control']);
-                    echo $this->Form->control('endereco', ['class' => 'form-control']);
-                    echo $this->Form->control('email', ['class' => 'form-control']);
+                    echo $this->Form->control('nome', ['class' => 'form-control', 'placeholder' => 'Digite seu nome']);
+                    echo $this->Form->control('contato', ['class' => 'form-control', 'placeholder' => 'Digite seu celular']);
+                    echo $this->Form->control('endereco', ['class' => 'form-control', 'placeholder' => 'Digite seu endereço']);
+                    echo $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'Digite seu email']);
                 ?>
             </fieldset><br>
             <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>

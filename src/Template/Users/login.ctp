@@ -13,8 +13,8 @@
 
             <form class="form-signin">	
             <span id="reauth-email" class="reauth-email"></span>	
-				<?= $this->Form->control('username',['class' => 'form-control']) ?>
-				<?= $this->Form->control('password', ['class' => 'form-control']) ?>
+				<?= $this->Form->control('username',['class' => 'form-control', 'placeholder' => 'Digite seu usuario']) ?>
+				<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '******']) ?>
 				<div id="remember" class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-me"> Remember me
