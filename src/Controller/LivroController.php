@@ -54,7 +54,7 @@ class LivroController extends AppController
             if ($this->Livro->save($livro)) {
                 $this->Flash->success(__('The livro has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                /*return $this->redirect(['action' => 'index']);*/
             }
             $this->Flash->error(__('The livro could not be saved. Please, try again.'));
         }

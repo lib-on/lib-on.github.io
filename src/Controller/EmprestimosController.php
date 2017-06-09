@@ -61,7 +61,8 @@ class EmprestimosController extends AppController
             }
             $this->Flash->error(__('The emprestimo could not be saved. Please, try again.'));
         }
-        
+        $livros = $this->Emprestimos->Livros->find('list', ['limit' => 200]);
+        $this->set(compact('emprestimo', 'livros'));
         $this->set('_serialize', ['emprestimo']);
     }
 
@@ -86,26 +87,8 @@ class EmprestimosController extends AppController
             }
             $this->Flash->error(__('The emprestimo could not be saved. Please, try again.'));
         }
-        $livros = $this->Emprestimos->Livros->find('list', [
-                'keyField' => 'id',
-                'valueField' => function ($row){
-                    return $row['titulo'] . '-' . $row['autor'];
-                }
-            ]);
-        $users = $this->Emprestimos->Users->find('list', [
-            'keyField' => 'id',
-            'valueField' => function($row){
-                return $row['matricula'] . ' - ' . $row['nome'];
-            }
-            ]);
-        $acervo = $this->Emprestimos->LivroFisico->find('list', [
-            'keyField' => 'codigo_livro',
-            'valueField' => function($row){
-                return $row['identificador'];
-            }
-            ] );
-
-        $this->set(compact('emprestimo', 'livros', 'users', 'acervo'));
+        $livros = $this->Emprestimos->Livros->find('list', ['limit' => 200]);
+        $this->set(compact('emprestimo', 'livros'));
         $this->set('_serialize', ['emprestimo']);
     }
 

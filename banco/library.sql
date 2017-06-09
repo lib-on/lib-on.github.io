@@ -78,13 +78,13 @@ CREATE TABLE `emprestimos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `livro_id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `codigo_livros` int(10) DEFAULT NULL,
+  `identificador_livro` int(11),
   PRIMARY KEY (`id`),
   KEY `livro_id` (`livro_id`),
-  KEY `codigo_livros` (`codigo_livros`),
+  KEY `identificador_livro` (`identificador_livro`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `livro_id` FOREIGN KEY (`livro_id`) REFERENCES `livros` (`id`),
-  CONSTRAINT `codigo_livros` FOREIGN KEY (`codigo_livros`) REFERENCES `livro_fisico` (`codigo_livro`),
+  CONSTRAINT `identificador_livro` FOREIGN KEY (`identificador_livro`) REFERENCES `livro_fisico` (`id`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -106,11 +106,11 @@ DROP TABLE IF EXISTS `livro_fisico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `livro_fisico` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `livros_id` int(11) NOT NULL,
   `alugado` tinyint(1) NOT NULL,
-  `quantidade` int(11) NOT NULL,
-  `codigo_livro` int(10) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`codigo_livro`),
+  `codigo_livro` varchar(11) NOT NULL UNIQUE KEY,
+  PRIMARY KEY (`id`),
   KEY `livros_id` (`livros_id`),
   CONSTRAINT `livros_id` FOREIGN KEY (`livros_id`) REFERENCES `livros` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

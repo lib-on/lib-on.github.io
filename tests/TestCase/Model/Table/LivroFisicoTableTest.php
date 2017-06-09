@@ -28,8 +28,7 @@ class LivroFisicoTableTest extends TestCase
         'app.livros',
         'app.categorias',
         'app.editoras',
-        'app.emprestimos',
-        'app.users'
+        'app.emprestimos'
     ];
 
     /**

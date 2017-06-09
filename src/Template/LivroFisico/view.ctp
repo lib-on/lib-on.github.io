@@ -6,8 +6,8 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Livro Fisico'), ['action' => 'edit', $livroFisico->codigo_livro]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Livro Fisico'), ['action' => 'delete', $livroFisico->codigo_livro], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->codigo_livro)]) ?> </li>
+        <li><?= $this->Html->link(__('Edit Livro Fisico'), ['action' => 'edit', $livroFisico->id]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Livro Fisico'), ['action' => 'delete', $livroFisico->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Livro Fisico'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Livro Fisico'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
@@ -15,23 +15,19 @@
     </ul>
 </nav>
 <div class="livroFisico view large-9 medium-8 columns content">
-    <h3><?= h($livroFisico->codigo_livro) ?></h3>
+    <h3><?= h($livroFisico->id) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Livro') ?></th>
             <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Identificador') ?></th>
-            <td><?= h($livroFisico->identificador) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Quantidade') ?></th>
-            <td><?= $this->Number->format($livroFisico->quantidade) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Codigo Livro') ?></th>
-            <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
+            <td><?= h($livroFisico->codigo_livro) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($livroFisico->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Alugado') ?></th>

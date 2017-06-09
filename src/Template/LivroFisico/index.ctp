@@ -16,26 +16,24 @@
     <table cellpadding="0" cellspacing="0" class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('livros_id', __('Livro')) ?></th>
-                <th scope="col"><?= $this->Paginator->sort('alugado', __('Alugados')) ?></th>
-                <th scope="col"><?= $this->Paginator->sort('quantidade') ?></th>
-                <!-- <th scope="col"><?= $this->Paginator->sort('codigo_livro') ?></th> -->
-                <th scope="col"><?= $this->Paginator->sort('identificador') ?></th>
+                <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
+                <th scope="col"><?= $this->Paginator->sort('livros_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('alugado') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('codigo_livro') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($livroFisico as $livroFisico): ?>
             <tr>
+                <!-- <td><?= $this->Number->format($livroFisico->id) ?></td> -->
                 <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->titulo, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
-                <td><?= h($livroFisico->alugado) ?></td>
-                <td><?= $this->Number->format($livroFisico->quantidade) ?></td>
-                <!-- <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td> -->
-                <td><?= h($livroFisico->identificador) ?></td>
+                <td><?= h($livroFisico->alugado==1?'alugado':'') ?></td>
+                <td><?= h($livroFisico->codigo_livro) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->codigo_livro]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->codigo_livro]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livroFisico->codigo_livro], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->codigo_livro)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livroFisico->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

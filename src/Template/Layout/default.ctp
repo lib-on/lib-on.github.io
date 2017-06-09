@@ -31,6 +31,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('bootstrap.css') ?>
     <?= $this->Html->css('bootstrap-theme.css') ?>
     <?= $this->Html->css('bootstrap-theme.min.css') ?>
+   
+    <?= $this->Html->css('font-awesome.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -40,26 +42,70 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="message">
         
     </div>
-    <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
+    <!-- <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
         <div class="container-fluid navbar-default">
             <div class="nav navbar-nav navbar-left menu-items">
-                <a class="navbar-brand"><?= $this->fetch('title') ?></a>
+                <a class="navbar-brand"></a>
             </div>
             
         </div>
         
-        <div class="container-fluid navbar-default">
+        <div class="container-fluid navbar-default"> -->
             <!-- <ul class="right">
                 <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
             </ul> -->
+        <!-- </div>
+    </nav> -->
+    <!-- <?=   debug($this);?> -->
+    <nav class="navbar navbar-default" id="navigator">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">LIB-on</a>
         </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(__('Livraria'), ['controller' => 'livros', 'action' => 'index'])?></li>
+            <li><a href="#">Equipe</a></li>
+            <li><a href="#">Emprestimos</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <form name="form-search" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" class="form">
+                <input type="text" name="palavra" class="form-control" />
+                <input type="submit"  value="Buscar" class="btn btn-default" />
+            </form> -->
+
+            <li><?= $this->Html->link(__('Login'), ['controller' => 'users', 'action' => 'login'])?></li>
+          </ul>
+        </div>
+      </div>
     </nav>
+
     <?= $this->Flash->render() ?>
     <div class="content">
         <?= $this->fetch('content') ?>
     </div>
+    <style type="text/css">
+        .formSearch{
+            max-width: 250px;
+        }
+        .btn{
+            font-weight: 500;
+            height: 30px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+    </style>
     <footer>
     </footer>
+    
 </body>
 </html>

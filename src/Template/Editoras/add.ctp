@@ -16,7 +16,7 @@
         <div class="col-sm-9">
             <?= $this->Form->create($editora) ?>
             <fieldset>
-                <legend><?= __('Add Editora') ?></legend>
+                <legend><?= __('Adicionar Editora') ?></legend>
                 <?php
                     echo $this->Form->control('nome', ['class' => 'form-control']);
                     echo $this->Form->control('contato', ['class' => 'form-control']);

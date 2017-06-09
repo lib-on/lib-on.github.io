@@ -24,9 +24,7 @@
         <?php
             echo $this->Form->control('livro_id', ['options' => $livros]);
             echo $this->Form->control('id_usuario');
-            echo $this->Form->control('codigo_livros');
-            echo $this->Form->control('entrega');
-            echo $this->Form->control('data_emprestimo');
+            echo $this->Form->control('identificador_livro');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

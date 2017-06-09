@@ -6,11 +6,10 @@ use Cake\ORM\Entity;
 /**
  * LivroFisico Entity
  *
+ * @property int $id
  * @property int $livros_id
  * @property bool $alugado
- * @property int $quantidade
- * @property int $codigo_livro
- * @property string $identificador
+ * @property string $codigo_livro
  *
  * @property \App\Model\Entity\Livro $livro
  */
@@ -28,6 +27,8 @@ class LivroFisico extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'codigo_livro' => false
+        'id' => false
     ];
+
+    
 }

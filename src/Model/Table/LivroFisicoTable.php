@@ -33,8 +33,8 @@ class LivroFisicoTable extends Table
         parent::initialize($config);
 
         $this->setTable('livro_fisico');
-        $this->setDisplayField('codigo_livro');
-        $this->setPrimaryKey('codigo_livro');
+        $this->setDisplayField('id');
+        $this->setPrimaryKey('id');
 
         $this->belongsTo('Livros', [
             'foreignKey' => 'livros_id',
@@ -51,22 +51,18 @@ class LivroFisicoTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
             ->boolean('alugado')
             ->requirePresence('alugado', 'create')
             ->notEmpty('alugado');
 
         $validator
-            ->integer('quantidade')
-            ->requirePresence('quantidade', 'create')
-            ->notEmpty('quantidade');
-
-        $validator
-            ->integer('codigo_livro')
-            ->allowEmpty('codigo_livro', 'create');
-
-        $validator
-            ->requirePresence('identificador', 'create')
-            ->notEmpty('identificador');
+            ->requirePresence('codigo_livro', 'create')
+            ->notEmpty('codigo_livro')
+            ->add('codigo_livro', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         return $validator;
     }
@@ -80,6 +76,7 @@ class LivroFisicoTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->isUnique(['codigo_livro']));
         $rules->add($rules->existsIn(['livros_id'], 'Livros'));
 
         return $rules;

@@ -30,16 +30,8 @@
             <td><?= $this->Number->format($emprestimo->id_usuario) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Codigo Livros') ?></th>
-            <td><?= $this->Number->format($emprestimo->codigo_livros) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Entrega') ?></th>
-            <td><?= h($emprestimo->entrega) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Data Emprestimo') ?></th>
-            <td><?= h($emprestimo->data_emprestimo) ?></td>
+            <th scope="row"><?= __('Identificador Livro') ?></th>
+            <td><?= $this->Number->format($emprestimo->identificador_livro) ?></td>
         </tr>
     </table>
 </div>

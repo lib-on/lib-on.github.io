@@ -64,7 +64,7 @@ class LivroFisicoController extends AppController
         $livros = $this->LivroFisico->Livros->find('list', [
             'keyField' => 'id',
             'valueField' => function($row){
-                return $row['titulo'] . '-' . $row['autor'];
+                return $row['titulo'] . ' por: ' . $row['autor'];
             }]);
         $this->set(compact('livroFisico', 'livros'));
         $this->set('_serialize', ['livroFisico']);
