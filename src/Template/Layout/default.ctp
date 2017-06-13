@@ -42,7 +42,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="message">
         
     </div>
-    <nav class="navbar navbar-default" id="navigator">
+    <nav class="navbar navbar-inverse" id="navigator">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -50,14 +50,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
           </button>
-          <a class="navbar-brand" href="#">LIB-on</a>
+          <a class="navbar-brand" href="#"><b>LIB-on</b></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(__('Livraria'), ['controller' => 'livros', 'action' => 'index'])?></li>
-            <li><a href="#">Equipe</a></li>
-            <li><a href="#">Emprestimos</a></li>
+            <li><a href="#"><b>Equipe</b></a></li>
+            <li><a href="#"><b>Emprestimos</b></a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <form name="form-search" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" class="form">

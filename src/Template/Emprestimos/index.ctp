@@ -13,10 +13,10 @@
 </nav>
 <div class="emprestimos index large-9 medium-8 columns content">
     <h3><?= __('Emprestimos') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table table-bordered">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                 <th scope="col"><?= $this->Paginator->sort('livro_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('id_usuario') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('identificador_livro') ?></th>
@@ -26,7 +26,7 @@
         <tbody>
             <?php foreach ($emprestimos as $emprestimo): ?>
             <tr>
-                <td><?= $this->Number->format($emprestimo->id) ?></td>
+                <!-- <td><?= $this->Number->format($emprestimo->id) ?></td> -->
                 <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
                 <td><?= $this->Number->format($emprestimo->id_usuario) ?></td>
                 <td><?= $this->Number->format($emprestimo->identificador_livro) ?></td>

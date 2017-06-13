@@ -40,6 +40,10 @@ class EmprestimosTable extends Table
             'foreignKey' => 'livro_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('LivroFisico', [
+            'foreignKey' => 'identificador_livro',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**

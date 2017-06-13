@@ -5,8 +5,8 @@
 <div class="users form">
 <?= $this->Flash->render('auth') ?>
 <?= $this->Form->create() ?>
-	<fieldset>
-	<div class="container">
+    <fieldset>
+    <div class="container">
 		<div class="card card-container">
 			<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
@@ -39,7 +39,9 @@
 body, html {
     height: 100%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(#C9EFFF, #12CE40);
+    image-repeat: http://www.heartbutteschool.com/library.jpg;
+    background-image: url("http://www.heartbutteschool.com/library.jpg");
+    /*background-image: linear-gradient(#C9EFFF, #12CE40);*/
 }
 
 .card-container.card {
@@ -72,6 +74,10 @@ body, html {
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    filter:alpha(opacity=40);
+     opacity: 0.89;
+     -moz-opacity:0.5;
+     -webkit-opacity:0.5;
 }
 
 .profile-img-card {

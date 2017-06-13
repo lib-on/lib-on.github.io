@@ -24,9 +24,9 @@ use Cake\ORM\TableRegistry;
         $identificator = $queryCategories->select('identificador')->where('id');
      ?>
         <div class="col-sm-9">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
+            <table class="table table-striped table-bordered">
+                <thead class="thead-inverse">
+                    <tr >
             <h3><?= __('Livros') ?></h3>
                         <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>

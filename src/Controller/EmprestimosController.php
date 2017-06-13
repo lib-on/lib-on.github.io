@@ -61,7 +61,13 @@ class EmprestimosController extends AppController
             }
             $this->Flash->error(__('The emprestimo could not be saved. Please, try again.'));
         }
-        $livros = $this->Emprestimos->Livros->find('list', ['limit' => 200]);
+        $livros = $this->Emprestimos->Livros->find('list',[ 
+            'keyField' => 'id',
+            'valueField' => function($row){
+                return 'título: ' . $row['titulo'] . ' Autor: ' . $row['autor'];
+            }]);
+        $users;
+        $acervo;
         $this->set(compact('emprestimo', 'livros'));
         $this->set('_serialize', ['emprestimo']);
     }
