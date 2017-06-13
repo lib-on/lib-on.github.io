@@ -5,9 +5,11 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Livro Fisico'), ['action' => 'edit', $livroFisico->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Livro Fisico'), ['action' => 'delete', $livroFisico->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]) ?> </li>
+
+        <!-- <li class="heading"><?= __('Actions') ?></li> -->
+        <li><?= $this->Html->link(__('Edit Livro Fisico'), ['action' => 'edit', $livroFisico->codigo_livro]) ?> </li>
+        <li><?= $this->Form->postLink(__('Delete Livro Fisico'), ['action' => 'delete', $livroFisico->codigo_livro], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->codigo_livro)]) ?> </li>
+
         <li><?= $this->Html->link(__('List Livro Fisico'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Livro Fisico'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>

@@ -7,7 +7,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
             </ul>
         </div>
@@ -17,11 +17,11 @@
                 <legend><?= __('Add User') ?></legend>
 
                 <?php
-                    echo $this->Form->control('nome', ['class' => 'form-control']);
-                    echo $this->Form->control('matricula', ['class' => 'form-control']);
-                    echo $this->Form->control('email', ['class' => 'form-control']);
-                    echo $this->Form->control('username', ['class' => 'form-control']);
-                    echo $this->Form->control('password', ['class' => 'form-control']);
+                    echo $this->Form->control('nome', ['class' => 'form-control', 'placeholder' => 'Didite seu nome']);
+                    echo $this->Form->control('matricula', ['class' => 'form-control', 'placeholder' => 'Digite matricula']);
+                    echo $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'Digite email']);
+                    echo $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario']);
+                    echo $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****']);
                     echo $this->Form->control('role', [
                                             'options' => ['Students' => 'Aluno',
                                                 'Employee' => 'Administrador',

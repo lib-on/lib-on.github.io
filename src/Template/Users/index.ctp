@@ -7,7 +7,7 @@
     <div class="row content">
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('Cadastrar usuário'), ['action' => 'add']) ?></li>
             </ul>
         </div>

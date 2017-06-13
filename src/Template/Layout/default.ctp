@@ -42,22 +42,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <div class="message">
         
     </div>
-    <!-- <nav class="collapse navbar-collapse" data-topbar role="navigation" id="navbar-default">
-        <div class="container-fluid navbar-default">
-            <div class="nav navbar-nav navbar-left menu-items">
-                <a class="navbar-brand"></a>
-            </div>
-            
-        </div>
-        
-        <div class="container-fluid navbar-default"> -->
-            <!-- <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul> -->
-        <!-- </div>
-    </nav> -->
-    <!-- <?=   debug($this);?> -->
     <nav class="navbar navbar-default" id="navigator">
       <div class="container-fluid">
         <div class="navbar-header">
