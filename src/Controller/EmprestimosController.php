@@ -16,8 +16,8 @@ class EmprestimosController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
-    public function index()
-    {
+    public function index(){
+
         $this->paginate = [
             'contain' => ['Livros']
         ];
@@ -61,14 +61,23 @@ class EmprestimosController extends AppController
             }
             $this->Flash->error(__('The emprestimo could not be saved. Please, try again.'));
         }
-        $livros = $this->Emprestimos->Livros->find('list',[ 
-            'keyField' => 'id',
+        $livros = $this->Emprestimos->Livros->find('list', [
+            'keyValue' => 'id',
             'valueField' => function($row){
-                return 'título: ' . $row['titulo'] . ' Autor: ' . $row['autor'];
+                return $row['titulo'] . ', autor: ' . $row['autor'];
             }]);
-        $users;
-        $acervo;
-        $this->set(compact('emprestimo', 'livros'));
+        $livroFisico = $this->Emprestimos->LivroFisico->find('list', [
+            'keyValue' => 'id',
+            'valueField' => function($row){
+                return $row['codigo_livro'];
+            }]);
+
+        $users = $this->Emprestimos->Users->find('list', [
+            'keyValue' => 'id',
+            'valueField' => function($row){
+                return $row['nome'] . ' Matrícula: ' . $row['matricula'] . ' ' . $row['role'];
+            }]);
+        $this->set(compact('emprestimo', 'livros', 'livroFisico', 'users'));
         $this->set('_serialize', ['emprestimo']);
     }
 

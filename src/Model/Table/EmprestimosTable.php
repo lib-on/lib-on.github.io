@@ -44,6 +44,12 @@ class EmprestimosTable extends Table
             'foreignKey' => 'identificador_livro',
             'joinType' => 'INNER'
         ]);
+
+        $this->belongsTo('Users', [
+            'foreignkey' => 'id_usuario',
+            'joinType' => 'INNER'
+
+            ]);
     }
 
     /**
@@ -66,6 +72,15 @@ class EmprestimosTable extends Table
         $validator
             ->integer('identificador_livro')
             ->allowEmpty('identificador_livro');
+
+        $validator
+            ->dateTime('data_emprestimo')
+            ->requirePresence('data_emprestimo', 'create')
+            ->notEmpty('data_emprestimo');
+
+        $validator
+            ->dateTime('data_entrega')
+            ->allowEmpty('data_entrega');
 
         return $validator;
     }

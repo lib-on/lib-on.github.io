@@ -5,7 +5,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <!-- <li class="heading"><?= __('Actions') ?></li> -->
+        <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('List Emprestimos'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
@@ -17,13 +17,10 @@
         <legend><?= __('Add Emprestimo') ?></legend>
         <?php
             echo $this->Form->control('livro_id', ['options' => $livros]);
-            echo $this->Form->control('id_usuario');
-            echo $this->Form->control('identificador_livro');
             echo $this->Form->control('id_usuario', ['options' => $users]);
-            echo $this->Form->control('codigo_livros', ['options' => $acervo]);
-            echo $this->Form->control('entrega', [ 'type' => 'date','placeholder' => 'Digite data de entrega']);
-            echo $this->Form->control('data_emprestimo', ['type' => 'date','placeholder' => 'Digite data de emprestimo']);
-
+            echo $this->Form->control('identificador_livro', ['options' => $livroFisico]);
+            echo $this->Form->control('data_emprestimo');
+            echo $this->Form->control('data_entrega', ['empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

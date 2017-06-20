@@ -25,6 +25,7 @@
       width: 100%; /* Set width to 100% */
       margin: auto;
       min-height:200px;
+      overflow: hidden;
   }
 
   /* Hide the carousel text when the screen is less than 600 pixels wide */

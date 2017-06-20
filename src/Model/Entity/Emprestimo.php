@@ -10,6 +10,8 @@ use Cake\ORM\Entity;
  * @property int $livro_id
  * @property int $id_usuario
  * @property int $identificador_livro
+ * @property \Cake\I18n\Time $data_emprestimo
+ * @property \Cake\I18n\Time $data_entrega
  *
  * @property \App\Model\Entity\Livro $livro
  */

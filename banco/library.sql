@@ -79,6 +79,8 @@ CREATE TABLE `emprestimos` (
   `livro_id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `identificador_livro` int(11),
+  `data_emprestimo` datetime not null,
+  `data_entrega` datetime default null,
   PRIMARY KEY (`id`),
   KEY `livro_id` (`livro_id`),
   KEY `identificador_livro` (`identificador_livro`),
