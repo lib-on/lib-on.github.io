@@ -5,7 +5,7 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <!-- <li class="heading"><?= __('Actions') ?></li> -->
+        <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Livro Fisico'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
@@ -13,10 +13,9 @@
 </nav>
 <div class="livroFisico index large-9 medium-8 columns content">
     <h3><?= __('Livro Fisico') ?></h3>
-    <table cellpadding="0" cellspacing="0" class="table table-bordered">
+    <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                 <th scope="col"><?= $this->Paginator->sort('livros_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('alugado') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('codigo_livro') ?></th>
@@ -26,10 +25,9 @@
         <tbody>
             <?php foreach ($livroFisico as $livroFisico): ?>
             <tr>
-                <!-- <td><?= $this->Number->format($livroFisico->id) ?></td> -->
-                <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->titulo, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
-                <td><?= h($livroFisico->alugado==1?'alugado':'') ?></td>
-                <td><?= h($livroFisico->codigo_livro) ?></td>
+                <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->id]) : '' ?></td>
+                <td><?= h($livroFisico->alugado) ?></td>
+                <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->id]) ?>

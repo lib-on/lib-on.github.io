@@ -20,7 +20,8 @@ class LivroFisicoControllerTest extends IntegrationTestCase
         'app.livros',
         'app.categorias',
         'app.editoras',
-        'app.emprestimos'
+        'app.emprestimos',
+        'app.users'
     ];
 
     /**
