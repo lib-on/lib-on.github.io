@@ -18,7 +18,7 @@
         <?php
             echo $this->Form->control('livro_id', ['options' => $livros]);
             echo $this->Form->control('id_usuario', ['options' => $users]);
-            echo $this->Form->control('identificador_livro', ['options' => $livroFisico]);
+            echo $this->Form->control('identificador_livro', ['type' => 'text']);
             echo $this->Form->control('data_emprestimo');
             echo $this->Form->control('data_entrega', ['empty' => true]);
         ?>
