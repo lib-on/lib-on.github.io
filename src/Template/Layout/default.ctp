@@ -33,6 +33,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('bootstrap-theme.min.css') ?>
    
     <?= $this->Html->css('font-awesome.min.css') ?>
+    <?= $this->Html->script('jquery-3.1.1.js') ?>
     <?= $this->Html->script('typeahead.bundle.js') ?>
 
     <?= $this->fetch('meta') ?>

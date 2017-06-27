@@ -107,6 +107,15 @@ class EmprestimosController extends AppController
         $this->set('_serialize', ['emprestimo']);
     }
 
+    public function buscaId($query, $livro_id) {
+        $ids = array();
+        for ($i = 900; $i < 1000; $i++) {
+            // $ids[] = ['value' => $i];
+            $ids[] = $i;
+        }
+        $this->set(compact('ids'));
+    }
+
     /**
      * Delete method
      *
