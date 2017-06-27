@@ -82,7 +82,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     body, html {
         /*height: 100%;*/
         /*background-repeat: no-repeat;*/
-       background-color: #F0FFFF;
+        background-color: #F9F9F9;
     }
         .formSearch{
             max-width: 250px;
@@ -94,6 +94,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             -webkit-user-select: none;
             user-select: none;
             cursor: default;
+        }
+        .navbar-inverse {
+            background-image: linear-gradient(to bottom, #7ACDD1 0px, #EDF9F9 100%);
+            background-repeat: repeat-x;
+            border-radius: 0px;
+            border-color: #FFF;
+        }
+        .navbar-nav li{
+            font-weight: 600;
+            font-style: verdana;
+        }
+
+        .active{
+            background-image: linear-gradient(to bottom, #7ACDD1 0px, #EDF9F9 100%);
+            background-repeat: repeat-x;
+            border-radius: 4px;
         }
     </style>
     <footer>
