@@ -31,7 +31,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('bootstrap.css') ?>
     <?= $this->Html->css('bootstrap-theme.css') ?>
     <?= $this->Html->css('bootstrap-theme.min.css') ?>
-   
+
     <?= $this->Html->css('font-awesome.min.css') ?>
     <?= $this->Html->script('jquery-3.1.1.js') ?>
     <?= $this->Html->script('typeahead.bundle.js') ?>
@@ -40,9 +40,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
+<body
+>
     <div class="message">
-        
+
     </div>
     <nav class="navbar navbar-inverse" id="navigator">
       <div class="container-fluid">
@@ -50,7 +51,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#"><b>LIB-on</b></a>
         </div>
@@ -78,6 +79,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->fetch('content') ?>
     </div>
     <style type="text/css">
+    body, html {
+        /*height: 100%;*/
+        /*background-repeat: no-repeat;*/
+       background-color: #F0FFFF;
+    }
         .formSearch{
             max-width: 250px;
         }
@@ -92,6 +98,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </style>
     <footer>
     </footer>
-    
+
 </body>
 </html>

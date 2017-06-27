@@ -51,18 +51,13 @@ class LivroFisicoTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('id')
-            ->allowEmpty('id', 'create');
-
-        $validator
             ->boolean('alugado')
             ->requirePresence('alugado', 'create')
             ->notEmpty('alugado');
 
         $validator
-            ->requirePresence('codigo_livro', 'create')
-            ->notEmpty('codigo_livro')
-            ->add('codigo_livro', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+            ->integer('codigo_livro')
+            ->allowEmpty('codigo_livro', 'create');
 
         return $validator;
     }
@@ -76,7 +71,6 @@ class LivroFisicoTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['codigo_livro']));
         $rules->add($rules->existsIn(['livros_id'], 'Livros'));
 
         return $rules;

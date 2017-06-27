@@ -1,4 +1,4 @@
-<?php 
+<?php
 	use Cake\View\Helper\HtmlHelper;
  ?>
 
@@ -11,8 +11,8 @@
 			<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
             <p id="profile-name" class="profile-name-card"></p>
 
-            <form class="form-signin">	
-            <span id="reauth-email" class="reauth-email"></span>	
+            <form class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
 				<?= $this->Form->control('username',['class' => 'form-control', 'placeholder' => 'Digite seu usuario']) ?>
 				<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '******']) ?>
 				<div id="remember" class="checkbox">
