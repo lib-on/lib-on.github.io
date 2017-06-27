@@ -22,7 +22,9 @@
                 </div>
                 <?= $this->Form->button(__('Login'),['class' => 'btn btn-success']); ?>
 				<?= $this->Form->end() ?>
-				<?= $this->Form->button(__('Cadastre-se'),['class' => 'btn btn-default','action' => 'add']) ?>
+                <div class="cadastro btn btn-default">                    
+                <?= $this->Html->link(__('Cadastre-se'),['class' => 'btn btn-default','action' => 'add']) ?>
+                </div>
 			</form>
 		</div>
 	</div>
@@ -36,6 +38,10 @@
 /*
  * General styles
  */
+ .cadastro a{
+    
+    text-decoration: none;
+ }
 body, html {
     height: 100%;
     background-repeat: no-repeat;
@@ -55,7 +61,7 @@ body, html {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 /*
@@ -74,10 +80,8 @@ body, html {
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    filter:alpha(opacity=40);
-     opacity: 0.89;
-     -moz-opacity:0.5;
-     -webkit-opacity:0.5;
+    filter: alpha(opacity=50);
+    opacity: 0.97;
 }
 
 .profile-img-card {

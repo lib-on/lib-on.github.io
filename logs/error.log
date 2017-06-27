@@ -19981,3 +19981,186 @@ Stack Trace:
 2017-06-27 15:31:34 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 2017-06-27 15:31:47 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
 >>>>>>> d1812300c1a8600d5daec8290e704d864d5315d1
+2017-06-27 16:48:17 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:48:17 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /users/add
+Stack Trace:
+#0 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '123', Array)
+#1 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(530): Cake\ORM\Table->getSchema()
+#9 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1281): Cake\View\Form\EntityContext->type('nome')
+#10 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1252): Cake\View\Helper\FormHelper->_inputType('nome', Array)
+#11 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1077): Cake\View\Helper\FormHelper->_parseOptions('nome', Array)
+#12 /home/alunoifpe/repositorios/biblioteca/src/Template/Users/add.ctp(20): Cake\View\Helper\FormHelper->control('nome', Array)
+#13 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(1011): include('/home/alunoifpe...')
+#14 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(972): Cake\View\View->_evaluate('/home/alunoifpe...', Array)
+#15 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(596): Cake\View\View->_render('/home/alunoifpe...')
+#16 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#17 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#18 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#19 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/alunoifpe/repositorios/biblioteca/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-06-27 16:49:10 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:49:10 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /users/add
+Stack Trace:
+#0 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '123', Array)
+#1 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(530): Cake\ORM\Table->getSchema()
+#9 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1281): Cake\View\Form\EntityContext->type('nome')
+#10 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1252): Cake\View\Helper\FormHelper->_inputType('nome', Array)
+#11 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1077): Cake\View\Helper\FormHelper->_parseOptions('nome', Array)
+#12 /home/alunoifpe/repositorios/biblioteca/src/Template/Users/add.ctp(20): Cake\View\Helper\FormHelper->control('nome', Array)
+#13 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(1011): include('/home/alunoifpe...')
+#14 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(972): Cake\View\View->_evaluate('/home/alunoifpe...', Array)
+#15 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(596): Cake\View\View->_render('/home/alunoifpe...')
+#16 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#17 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#18 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#19 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/alunoifpe/repositorios/biblioteca/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-06-27 16:49:12 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:49:12 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /users/add
+Stack Trace:
+#0 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '123', Array)
+#1 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(530): Cake\ORM\Table->getSchema()
+#9 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1281): Cake\View\Form\EntityContext->type('nome')
+#10 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1252): Cake\View\Helper\FormHelper->_inputType('nome', Array)
+#11 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1077): Cake\View\Helper\FormHelper->_parseOptions('nome', Array)
+#12 /home/alunoifpe/repositorios/biblioteca/src/Template/Users/add.ctp(20): Cake\View\Helper\FormHelper->control('nome', Array)
+#13 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(1011): include('/home/alunoifpe...')
+#14 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(972): Cake\View\View->_evaluate('/home/alunoifpe...', Array)
+#15 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(596): Cake\View\View->_render('/home/alunoifpe...')
+#16 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#17 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#18 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#19 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/alunoifpe/repositorios/biblioteca/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-06-27 16:49:47 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:49:48 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Request URL: /users/add
+Stack Trace:
+#0 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(47): PDO->__construct('mysql:host=loca...', 'root', '123', Array)
+#1 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Database/Connection.php(367): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/ORM/Table.php(530): Cake\Database\Connection->getSchemaCollection()
+#8 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Form/EntityContext.php(530): Cake\ORM\Table->getSchema()
+#9 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1281): Cake\View\Form\EntityContext->type('nome')
+#10 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1252): Cake\View\Helper\FormHelper->_inputType('nome', Array)
+#11 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/Helper/FormHelper.php(1077): Cake\View\Helper\FormHelper->_parseOptions('nome', Array)
+#12 /home/alunoifpe/repositorios/biblioteca/src/Template/Users/add.ctp(20): Cake\View\Helper\FormHelper->control('nome', Array)
+#13 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(1011): include('/home/alunoifpe...')
+#14 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(972): Cake\View\View->_evaluate('/home/alunoifpe...', Array)
+#15 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/View/View.php(596): Cake\View\View->_render('/home/alunoifpe...')
+#16 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Controller/Controller.php(623): Cake\View\View->render(NULL, NULL)
+#17 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(125): Cake\Controller\Controller->render()
+#18 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#19 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/BaseApplication.php(78): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#21 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(59): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#22 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(92): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#27 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#28 /home/alunoifpe/repositorios/biblioteca/vendor/cakephp/cakephp/src/Http/Server.php(80): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 /home/alunoifpe/repositorios/biblioteca/webroot/index.php(37): Cake\Http\Server->run()
+#30 {main}
+
+
+2017-06-27 16:51:01 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:51:53 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:51:55 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:51:58 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:52:01 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:53:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:53:20 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:53:22 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:53:50 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:53:58 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:06 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:08 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:16 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:18 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:19 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:54:39 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:55:08 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:55:59 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:56:10 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:57:23 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:57:25 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:58:01 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:58:10 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:58:19 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:58:59 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:59:01 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:59:04 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 16:59:48 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:00:24 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:01:09 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:01:27 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:02:27 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:02:51 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:03:20 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
+2017-06-27 17:03:23 Warning: DebugKit not enabled. You need to either install pdo_sqlite, or define the "debug_kit" connection name.
