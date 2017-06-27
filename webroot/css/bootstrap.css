@@ -1097,7 +1097,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #00FF00;
   text-decoration: none;
 }
 a:hover,
@@ -1437,6 +1437,7 @@ ol ol {
   padding-right: 5px;
   padding-left: 5px;
 }
+
 dl {
   margin-top: 0;
   margin-bottom: 20px;
@@ -3250,6 +3251,7 @@ fieldset[disabled] .btn-success.focus {
   background-color: #31b0d5;
   border-color: #269abc;
 }
+
 .btn-info:active:hover,
 .btn-info.active:hover,
 .open > .dropdown-toggle.btn-info:hover,
