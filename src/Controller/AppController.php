@@ -44,6 +44,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+                'authorize' => ['Controller'],
                  'loginRedirect' => [
                  'controller' => 'LivroFisico',
                  'action' => 'index'
@@ -73,7 +74,7 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event) {
         $this->Auth->allow ( [ 
-                'display', 'add' 
+                'display'
         ] );
     }
 

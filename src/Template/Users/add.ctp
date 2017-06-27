@@ -8,16 +8,16 @@
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+                <!-- <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li> -->
             </ul>
         </div>
         <div class="col-sm-9">
             <?= $this->Form->create($user) ?>
             <fieldset>
-                <legend><?= __('Add User') ?></legend>
+                <legend><?= __('Cadastrar Usuário') ?></legend>
 
                 <?php
-                    echo $this->Form->control('nome', ['class' => 'form-control', 'placeholder' => 'Didite seu nome']);
+                    echo $this->Form->control('nome', ['class' => 'form-control', 'placeholder' => 'Digite seu nome']);
                     echo $this->Form->control('matricula', ['class' => 'form-control', 'placeholder' => 'Digite matricula']);
                     echo $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'Digite email']);
                     echo $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario']);

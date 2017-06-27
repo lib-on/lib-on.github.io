@@ -31,10 +31,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('bootstrap.css') ?>
     <?= $this->Html->css('bootstrap-theme.css') ?>
     <?= $this->Html->css('bootstrap-theme.min.css') ?>
-
     <?= $this->Html->css('font-awesome.min.css') ?>
     <?= $this->Html->script('jquery-3.1.1.js') ?>
     <?= $this->Html->script('typeahead.bundle.js') ?>
+
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -53,14 +53,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><b>LIB-on</b></a>
+          <a class="navbar-brand"><b>LIB-on</b></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
+            <li><?=$this->Html->link(__('home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(__('Livraria'), ['controller' => 'livros', 'action' => 'index'])?></li>
-            <li><a href="#"><b>Equipe</b></a></li>
-            <li><a href="#"><b>Emprestimos</b></a></li>
+            <li><?= $this->Html->link(__('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li>
+            <li><a href="#">Equipe</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <form name="form-search" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" class="form">
@@ -102,14 +102,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             border-color: #FFF;
         }
         .navbar-nav li{
-            font-weight: 600;
-            font-style: verdana;
-        }
+            font-weight: 400;
+            font-style: normal;
+            font-family: verdana;
+            color: #FFF;
 
-        .active{
-            background-image: linear-gradient(to bottom, #7ACDD1 0px, #EDF9F9 100%);
-            background-repeat: repeat-x;
-            border-radius: 4px;
         }
     </style>
     <footer>
