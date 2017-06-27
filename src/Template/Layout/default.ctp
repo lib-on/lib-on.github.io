@@ -57,10 +57,21 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
+<<<<<<< HEAD
             <li><?=$this->Html->link(__('home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(__('Livraria'), ['controller' => 'livros', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(__('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li>
             <li><a href="#">Equipe</a></li>
+=======
+            <li class="active"><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(__('Livros'), ['controller' => 'livros', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(_('LivrosFisicos'), ['controller' => 'livro_fisico', 'action' => 'index'])?></li> 
+            <li><?= $this->Html->link(_('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(_('Editoras'), ['controller' => 'editoras', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li>
+            <li><a href="#"><b>Equipe</b></a></li>
+>>>>>>> 6f8743cecf07e4f3fc443dc57528bf049900269b
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <!-- <form name="form-search" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>?a=buscar" class="form">
