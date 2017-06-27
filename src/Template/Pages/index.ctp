@@ -82,47 +82,49 @@
   <h3>What We Do</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
+      <img src="img/Kaline.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Kaline Marculino</p>
     </div>
     <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
+      <img src="img/Obede.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Obede Oliveira </p>    
     </div>
     <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
+      <img src="img/Odin.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Odin santos </p>    
     </div>
     <div class="row">
-	    <div class="col-sm-4">
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	    </div>
+      <div class="col-sm-4">
+        <div class="well">
+         <p>Estudante do IFPE</p>
+        </div>
+        <div class="well">
+         <p></p>
+        </div>
+      </div>
 
-	    <div class="col-sm-4">
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	    </div>
+      <div class="col-sm-4">
+        <div class="well">
+         <p>Estudante do IFPE</p>
+        </div>
+        <div class="well">
+         <p>Some text..</p>
+        </div>
+      </div>
 
-	    <div class="col-sm-4">
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	      <div class="well">
-	       <p>Some text..</p>
-	      </div>
-	    </div>
+      <div class="col-sm-4">
+        <div class="well">
+         <p>Some text..</p>
+        </div>
+        <div class="well">
+         <p>Some text..</p>
+        </div>
+      </div>
     </div>
   </div>
 </div><br>
+
+
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
