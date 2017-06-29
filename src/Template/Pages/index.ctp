@@ -21,8 +21,8 @@
       padding: 25px;
     }
     
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
+  .carousel-inner{
+      width: 70%; /* Set width to 100% */
       margin: auto;
       min-height:200px;
       overflow: hidden;

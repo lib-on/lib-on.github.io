@@ -3,6 +3,7 @@
   * @var \App\View\AppView $this
   */
     use Cake\Routing\Router;
+    use Cake\ORM\TableRegistry;
 ?>
 <div class="container-fluid" id="actions-sidebar">
     <div class="row content">
@@ -16,28 +17,21 @@
 </div>
 <div class="col-sm-9">
     <?= $this->Form->create($emprestimo) ?>
+    
     <fieldset>
         <legend><?= __('Add Emprestimo') ?></legend>
         <?php
-<<<<<<< HEAD
             echo $this->Form->control('livro_id', ['options' => $livros]);
-            echo $this->Form->control('id_usuario', ['options' => $users]);
-            echo $this->Form->control('identificador_livro', ['type' => 'text', 'class' => 'typeahead']);
-            echo $this->Form->control('data_emprestimo');
-            echo $this->Form->control('data_entrega', ['empty' => true]);
-=======
-            echo $this->Form->control('livro_id', ['class'=> 'form-control', 'placeholder']);
-            echo $this->Form->control('id_usuario', ['class'=> 'form-control', 'placeholder' => 'Digite o id do usuario']);
-            echo $this->Form->control('identificador_livro', ['class'=> 'form-control', 'placeholder' => 'Digite o id do livro']);
+            echo $this->Form->control('id_usuario', ['options' => $users, 'type' => 'text']);
+            echo $this->Form->control('identificador_livro', ['options' => $livroFisico, 'placeholder' => 'Digite o id do livro']);
             echo $this->Form->control('data_emprestimo', ['class'=> 'form-control', 'placeholder' => 'Digite a data do emprestimo']);
             echo $this->Form->control('data_entrega',['class'=> 'form-control', 'placeholder' => 'Digite a data de entrega'], ['empty' => true]);
->>>>>>> d1812300c1a8600d5daec8290e704d864d5315d1
         ?>
     </fieldset><br>
     <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
     <?= $this->Form->end() ?>
 </div>
-<<<<<<< HEAD
+
 <script type="text/javascript">
 
     // var substringMatcher = function(strs) {
@@ -103,7 +97,7 @@
     //   source: identificador
     // });
 </script>
-=======
+
 </div>
 </div>
->>>>>>> d1812300c1a8600d5daec8290e704d864d5315d1
+

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Emprestimos Controller
@@ -16,6 +17,7 @@ class EmprestimosController extends AppController
      *
      * @return \Cake\Network\Response|null
      */
+        
     public function index(){
 
         $this->paginate = [
@@ -61,21 +63,29 @@ class EmprestimosController extends AppController
             }
             $this->Flash->error(__('The emprestimo could not be saved. Please, try again.'));
         }
+
+        
         $livros = $this->Emprestimos->Livros->find('list', [
             'keyValue' => 'id',
             'valueField' => function($row){
                 return $row['titulo'] . ', autor: ' . $row['autor'];
             }]);
+
+
         $livroFisico = $this->Emprestimos->LivroFisico->find('list', [
             'keyValue' => 'id',
             'valueField' => function($row){
                 return $row['codigo_livro'];
             }]);
 
+
         $users = $this->Emprestimos->Users->find('list', [
             'keyValue' => 'id',
             'valueField' => function($row){
-                return $row['nome'] . ' Matrícula: ' . $row['matricula'] . ' ' . $row['role'];
+                $query = 'SELECT id FROM users WHERE matricula LIKE "%id_usuario%"';
+                $resultado = mysql_query($query);
+                return $resultado;
+
             }]);
         $this->set(compact('emprestimo', 'livros', 'livroFisico', 'users'));
         $this->set('_serialize', ['emprestimo']);
