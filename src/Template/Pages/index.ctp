@@ -105,7 +105,7 @@
 
       <div class="col-sm-4">
         <div class="well">
-         <p>Estudante do IFPE</p>
+         <p>Estudante do IFPE, focado, fã do mundo nerd, louco por conhecimento e troca de informação.</p>
         </div>
         <div class="well">
          <p>Some text..</p>
@@ -127,15 +127,20 @@
 
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>Avenida Alfredo Bandeira de Melo, BR 101 norte - km 44
+  Centro, Igarassu - PE, Cep: 53610-000<br>
+  Fale conosco:
+  lib.onsystem@gmail.com
+  (81) 7346 - 0307</p> 
 </footer>
+
 <style type="text/css">
   .img-responsive{
-    border-radius:  50%;
+    border-radius: 50%;
     max-width: 400px;
     overflow: hidden;
   }
-  p{
+  p {
     margin: 20px;
     padding: 10px;
     font-family: verdana;
