@@ -46,7 +46,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     </div>
     <nav class="navbar navbar-inverse" id="navigator">
-    <?php $loguser = $this->request->session ()->read ( 'Auth.User' );?>
+    <?php $loguser = $this->request->session ()->read ( 'Auth.User' );
+    ?>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -74,14 +75,34 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <input type="text" name="palavra" class="form-control" />
                 <input type="submit"  value="Buscar" class="btn btn-default" />
             </form> -->
-            <li><?php 
+            <?php 
                 if ($loguser) {
-                    $user = $loguser ['nome'] . ' (' . $loguser['username'] . ') ';
-                }
-             ?></li>
-             
-
-            <!-- <li><?= $this->Html->link(__('Login'), ['controller' => 'users', 'action' => 'login'])?></li> -->
+                    $user = $loguser['username'] . ' (' . $loguser['role'] . ') ';
+                    // echo $user;
+               
+             ?>
+                <ul>
+                    
+                <li><?php echo '<i class="fa fa-id-card" aria-hidden="true"></i> '. $user ?></li>
+                <li><?php echo $this->Html->link ( 'Sair', array (
+                                'controller' => 'users',
+                                'action' => 'logout'
+                            ), array ('escape' => false ) ); ?></li>
+                </ul>
+            
+             <?php 
+                }else{
+             ?>
+                    <li><?php echo $this->Html->link ('<i class="fa fa-sign-in fa-lg"></i>' . ' Login', array (
+                                    'controller' => 'users',
+                                    'action' => 'login'
+                            ), array (
+                                    'escape' => false
+                            ) );
+                    ?></li>
+            <?php
+             }
+             ?>
           </ul>
         </div>
       </div>
