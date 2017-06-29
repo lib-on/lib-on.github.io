@@ -46,6 +46,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     </div>
     <nav class="navbar navbar-inverse" id="navigator">
+    <?php $loguser = $this->request->session ()->read ( 'Auth.User' );?>
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -58,14 +59,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
 
-            <li class="active"><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
+            <li><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(__('Livros'), ['controller' => 'livros', 'action' => 'index'])?></li>
-            <li><?= $this->Html->link(_('LivrosFisicos'), ['controller' => 'livro_fisico', 'action' => 'index'])?></li> 
+            <li><?= $this->Html->link(_('Acervo'), ['controller' => 'livro_fisico', 'action' => 'index'])?></li> 
             <li><?= $this->Html->link(_('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li>
-            <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
+            <!-- <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Editoras'), ['controller' => 'editoras', 'action' => 'index'])?></li>
-            <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li>
-            <li><a href="#"><b>Equipe</b></a></li>
+            <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li> -->
+            <li><?= $this->Html->link(_('Equipe'), ['controller' => 'pages', 'action' => 'index'])?></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -73,8 +74,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <input type="text" name="palavra" class="form-control" />
                 <input type="submit"  value="Buscar" class="btn btn-default" />
             </form> -->
+            <li><?php 
+                if ($loguser) {
+                    $user = $loguser ['nome'] . ' (' . $loguser['username'] . ') ';
+                }
+             ?></li>
+             
 
-            <li><?= $this->Html->link(__('Login'), ['controller' => 'users', 'action' => 'login'])?></li>
+            <!-- <li><?= $this->Html->link(__('Login'), ['controller' => 'users', 'action' => 'login'])?></li> -->
           </ul>
         </div>
       </div>
@@ -113,6 +120,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             font-family: verdana;
             color: #FFF;
 
+        }
+        .navbar-inverse .navbar-nav>li>a {
+            color: #171212;
         }
     </style>
     <footer>

@@ -51,17 +51,17 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
+        <img src="img/biblioteca1.jpeg" alt="Image">
         <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
+          <h3>LIB-on</h3>
+          <p>Sistema de Gerenciamento de bibliotecas, fácil, prático e rápido.</p>
         </div>      
       </div>
 
       <div class="item">
-        <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+        <img src="img/biblioteca2.jpeg " alt="Image">
         <div class="carousel-caption">
-          <h3>More Sell $</h3>
+          <h3>Lib-on</h3>
           <p>Lorem ipsum...</p>
         </div>      
       </div>
@@ -78,19 +78,19 @@
     </a>
 </div>
   
-<div class="container text-center">    
-  <h3>What We Do</h3><br>
+<div class="container text-center" id="equipe">    
+  <h3>Equipe de desenvolvimento</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <img src="img/Kaline.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="img/Kaline.jpg" class="img-responsive" style="width:100%" alt="Image" id="integrate">
       <p>Kaline Marculino</p>
     </div>
     <div class="col-sm-4"> 
-      <img src="img/Obede.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="img/Obede.jpg" class="img-responsive" style="width:100%" alt="Image" id="integrate">
       <p>Obede Oliveira </p>    
     </div>
     <div class="col-sm-4"> 
-      <img src="img/Odin.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <img src="img/Odin.jpg" class="img-responsive" style="width:100%" alt="Image" id="integrate">
       <p>Odin santos </p>    
     </div>
     <div class="row">
@@ -99,7 +99,7 @@
          <p>Estudante do IFPE</p>
         </div>
         <div class="well">
-         <p></p>
+         <p>Some text..</p>
         </div>
       </div>
 
@@ -114,7 +114,7 @@
 
       <div class="col-sm-4">
         <div class="well">
-         <p>Some text..</p>
+         <p>Estudante do IFPE</p>
         </div>
         <div class="well">
          <p>Some text..</p>
@@ -129,6 +129,29 @@
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+<style type="text/css">
+  .img-responsive{
+    border-radius:  50%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  p{
+    margin: 20px;
+    padding: 10px;
+    font-family: verdana;
+    font-style: normal;
+  }
+  .carousel-inner > img {
+    margin-top: 13px; 
+    position: relative;
+    width: 100%;
+    max-width: 1900px;
+    max-width: 1080px;
+    height: 20px; 
+    overflow: hidden;
+    /*border-radius: 50%;*/
+}
+</style>
 
 </body>
 </html>
