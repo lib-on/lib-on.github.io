@@ -18,12 +18,13 @@ use Cake\ORM\TableRegistry;
                 <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
             </ul>
         </div>
-        <div class="placeholdered">
 
         <div class="col-sm-5 col-sm-offset-1">
+        <div class="placeholdered">
             <?= $this->Form->create($livro) ?>
-            <fieldset>
-                <legend class="place"><?= __('Adicionar Livro') ?></legend>
+            <fieldset class="place">
+                <legend class="font"><?= __('Adicionar Livro') ?></legend>
+                    
                 <?php
 
                     echo $this->Form->control('titulo', ['class' => 'form-control my-input', 'placeholder' => 'Digite titulo do livro']);
@@ -34,8 +35,9 @@ use Cake\ORM\TableRegistry;
                     echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control my-input', 'placeholder' => 'Coloque id da editora']);
                    //debug($identificator);
                 ?>
+            
             </fieldset><br>
-            <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-5 col-md-2 btn btn-success']) ?>
+            <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-5 col-md-2 btn btn-primary']) ?>
             <?= $this->Form->end() ?>
         </div>
         </div>
@@ -48,17 +50,9 @@ use Cake\ORM\TableRegistry;
     font-size: 1.5em;
 }
 .place {
-    text-align: center;
     font-size: 1.5em;
 }
-
-.my-input::placeholder {
-    background: rgba(255, 255, 255, 0.4);
-    border-color: white;
-    /*color: 2em;*/
-    font-size: 1.4em;
-    /*padding: 0em;*/
-    /*height: 2em;*/
+.font {
+    font-size: 1.5em;
 }
-
 </style>
