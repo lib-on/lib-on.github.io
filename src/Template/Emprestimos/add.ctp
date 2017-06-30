@@ -22,10 +22,10 @@
         <legend><?= __('Add Emprestimo') ?></legend>
         <?php
             echo $this->Form->control('livro_id', ['options' => $livros]);
-            echo $this->Form->control('id_usuario', ['options' => $users, 'type' => 'text']);
+            echo $this->Form->control('id_usuario', ['options' => $users]);
             echo $this->Form->control('identificador_livro', ['options' => $livroFisico, 'placeholder' => 'Digite o id do livro']);
-            echo $this->Form->control('data_emprestimo', ['class'=> 'form-control', 'placeholder' => 'Digite a data do emprestimo']);
-            echo $this->Form->control('data_entrega',['class'=> 'form-control', 'placeholder' => 'Digite a data de entrega'], ['empty' => true]);
+            echo $this->Form->control('data_emprestimo', ['placeholder' => 'Digite a data do emprestimo']);
+            echo $this->Form->control('data_entrega',['placeholder' => 'Digite a data de entrega']);
         ?>
     </fieldset><br>
     <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>

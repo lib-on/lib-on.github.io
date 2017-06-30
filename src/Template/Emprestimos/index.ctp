@@ -31,7 +31,7 @@
                     <?php foreach ($emprestimos as $emprestimo): ?>
                     <tr>
                         <td><?= $this->Number->format($emprestimo->id) ?></td>
-                        <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->identificador, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
+                        <td><?= $emprestimo->has('livro') ? $this->Html->link($emprestimo->livro->titulo, ['controller' => 'Livros', 'action' => 'view', $emprestimo->livro->id]) : '' ?></td>
                         <td><?= $this->Number->format($emprestimo->id_usuario) ?></td>
                         <td><?= $this->Number->format($emprestimo->identificador_livro) ?></td>
                         <td><?= h($emprestimo->data_emprestimo) ?></td>

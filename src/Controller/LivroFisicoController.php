@@ -87,12 +87,13 @@ class LivroFisicoController extends AppController
             }
             $this->Flash->error(__('The livro fisico could not be saved. Please, try again.'));
         }
-        $livros = $this->LivroFisico->Livros->find('list', [
+        $books = $this->LivroFisico->Livros->find('list', [
             'keyValue' => 'id',
             'valueField' => function($row){
                 return $row['titulo'] . ', autor: ' . $row['autor'];
             }]);
-        $this->set(compact('livroFisico', 'livros'));
+
+        $this->set(compact('livroFisico', 'books'));
         $this->set('_serialize', ['livroFisico']);
     }
 

@@ -18,36 +18,33 @@ use Cake\ORM\TableRegistry;
                 <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
             </ul>
         </div>
-    <?php 
-        $categories = TableRegistry::get('Categorias');
-        $queryCategories = $categories->find();
-        $identificator = $queryCategories->select('identificador')->where('id');
-     ?>
         <div class="col-sm-9">
             <table class="table table-striped table-bordered">
                 <thead class="thead-inverse">
                     <tr >
             <h3><?= __('Livros') ?></h3>
-                        <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                        <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                         <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('isbn') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('edicao') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('autor') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('categoria_id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('editora_id') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('quantidade') ?></th>
                         <th scope="col" class="actions"><?= __('Actions') ?></th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($livros as $livro): ?>
                     <tr>
-                        <td><?= $this->Number->format($livro->id) ?></td>
+                        <!-- <td><?= $this->Number->format($livro->id) ?></td> -->
                         <td><?= h($livro->titulo) ?></td>
                         <td><?= h($livro->isbn) ?></td>
                         <td><?= h($livro->edicao) ?></td>
                         <td><?= h($livro->autor) ?></td>
                         <td><?= $livro->has('categoria') ? $this->Html->link($livro->categoria->identificador, ['controller' => 'Categorias', 'action' => 'view', $livro->categoria->id]) : '' ?></td>
                         <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
+                        <td></td>
                         <td class="actions">
                             <?= $this->Html->link(__('View'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>

@@ -67,7 +67,12 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <!-- <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Editoras'), ['controller' => 'editoras', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li> -->
-            <li><?= $this->Html->link(_('Equipe'), ['controller' => 'pages', 'action' => 'index'])?></li>
+            <li><?php
+                    echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' equipe', ($this->fetch ( 'title' ) === 'home') ? '#team' : '/#team', array (
+                            'escape' => false,
+                            'id' => 'team-link'
+                    ) );
+                    ?></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">

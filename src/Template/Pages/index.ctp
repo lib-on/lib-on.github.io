@@ -21,10 +21,10 @@
       padding: 25px;
     }
     
-  .carousel-inner{
+  .carousel-inner img{
       width: 70%; /* Set width to 100% */
       margin: auto;
-      min-height:200px;
+      max-height: 100%;
       overflow: hidden;
   }
 
@@ -36,6 +36,11 @@
   }
   .navigator{
   	background-color: #664455;
+  }
+  img{
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
   }
   </style>
 </head>
@@ -77,8 +82,74 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+
+ <div class="section" id="team">
+   
+    <h1 class="text-center">Equipe</h1>
+      <div class="container">
+        <div class="row">
+          <?=
+        $this->element('home/equipe', [
+            'name' => 'Obede Oliveira da Silva',
+            'company' => 'IFPE',
+            'year' => '2017',
+            'photo' => 'obede.jpg',
+            'about' => [
+            //aqui escrever sobre si.
+              'Obede Oliveira da Silva' => 'Estudante IFPE.'
+            ],
+            'email' => 'obede.silva3@gmail.com',
+            'social' => [
+              'linkedin' => [
+                'url' => '',
+                'title' => 'Obede Oliveira da Silva'
+              ]
+            ]
+          ]
+        )
+      ?>
+      <?= $this->element('home/equipe', [
+            'name' => 'Kaline Marculino',
+            'company' => 'IFPE',
+            'year' => '2017',
+            'photo' => 'kaline.jpg',
+            'about' => [
+              'Kaline Marculino' => 'Estudante IFPE.'
+            ],
+            'email' => 'kmarculino0@gmail.com',
+            'social' => [
+              'linkedin' => [
+                'url' => '',
+                'title' => 'Kaline Marculino'
+              ]
+            ]
+          ]
+        )
+      ?>
+      <?= $this->element('home/equipe', [
+            'name' => 'Odin Miguel Oliveira',
+            'company' => 'IFPE',
+            'year' => '2017',
+            'photo' => 'odin-1.jpg',
+            'about' => [
+              'Odin Miguel dos Santos Oliveira' => 'Estudante IFPE.'
+            ],
+            'email' => 'odinmiguel97@gmail.com',
+            'social' => [
+              'linkedin' => [
+                'url' => '',
+                'title' => 'Odin Miguel dos Santos Oliveira'
+              ]
+            ]
+          ]
+        )
+      ?>
+          
+        </div>
+      </div>
+ </div>
   
-<div class="container text-center" id="equipe">    
+<!-- <div class="container text-center" id="equipe">    
   <h3>Equipe de desenvolvimento</h3><br>
   <div class="row">
     <div class="col-sm-4">
@@ -105,10 +176,10 @@
 
       <div class="col-sm-4">
         <div class="well">
-         <p>Estudante do IFPE, focado, fã do mundo nerd, louco por conhecimento e troca de informação.</p>
+         <p>Estudante do IFPE</p>
         </div>
         <div class="well">
-         <p>Some text..</p>
+         <p>Estudante do IFPE, focado, fã do mundo nerd, louco por conhecimento e troca de informação.</p>
         </div>
       </div>
 
@@ -117,12 +188,12 @@
          <p>Estudante do IFPE</p>
         </div>
         <div class="well">
-         <p>Some text..</p>
+         <p>Estudante do IFPE, Desenvolvedor web com experiência voltada tanto para back-end quanto front-end</p>
         </div>
       </div>
     </div>
   </div>
-</div><br>
+</div><br> -->
 
 
 

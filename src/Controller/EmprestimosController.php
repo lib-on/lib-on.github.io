@@ -82,10 +82,7 @@ class EmprestimosController extends AppController
         $users = $this->Emprestimos->Users->find('list', [
             'keyValue' => 'id',
             'valueField' => function($row){
-                $query = 'SELECT id FROM users WHERE matricula LIKE "%id_usuario%"';
-                $resultado = mysql_query($query);
-                return $resultado;
-
+                return $row['nome'] . ', matricula: ' . $row['matricula'];
             }]);
         $this->set(compact('emprestimo', 'livros', 'livroFisico', 'users'));
         $this->set('_serialize', ['emprestimo']);

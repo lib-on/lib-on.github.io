@@ -18,7 +18,7 @@
     <fieldset>
         <legend><?= __('Add Livro Fisico') ?></legend>
         <?php
-            echo $this->Form->control('livros_id', ['options' => $livros]);
+            echo $this->Form->control('livros_id', ['options' => $books]);
             echo $this->Form->control('alugado');
             echo $this->Form->control('codigo_livro');
         ?>
