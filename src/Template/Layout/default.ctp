@@ -48,7 +48,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <nav class="navbar navbar-inverse" id="navigator">
     <?php $loguser = $this->request->session ()->read ( 'Auth.User' );
     ?>
-      <div class="container-fluid">
+      <div class="container-fluid" id="home">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             <span class="icon-bar"></span>
@@ -60,15 +60,45 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
 
-            <li><?= $this->Html->link(__('Home'), ['controller' => 'Pages', 'action' => 'index'])?></li>
-            <li><?= $this->Html->link(__('Livros'), ['controller' => 'livros', 'action' => 'index'])?></li>
-            <li><?= $this->Html->link(_('Acervo'), ['controller' => 'livro_fisico', 'action' => 'index'])?></li> 
-            <li><?= $this->Html->link(_('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li>
+            <li><?php echo $this->Html->link('<i class="fa fa-home fa-lg"></i> ' . 'Home', ($this->fetch('title') === 'index') ? '#home' : '/#home', array (
+                    'escape' => false,
+                    'id' => 'home-link'
+
+            )); ?></li>
+
+            <!-- <li><?= $this->Html->link(__('Livros'), ['controller' => 'livros', 'action' => 'index'])?></li> -->
+
+
+            <li><?php echo $this->Html->link ('<i class="fa fa-book fa-lg"></i>' . ' Livros', array (
+                                    'controller' => 'livros',
+                                    'action' => 'index'
+                            ), array (
+                                    'escape' => false
+                            ) );?></li>
+
+
+            <!-- <li><?= $this->Html->link(_('Acervo'), ['controller' => 'livro_fisico', 'action' => 'index'])?></li>  -->
+            <li><?php echo $this->Html->link ('<i class="fa fa-book fa-lg"></i>' . ' Acervo', array (
+                                    'controller' => 'livro_fisico',
+                                    'action' => 'index'
+                            ), array (
+                                    'escape' => false
+                            ) );?></li>
+
+
+            <!-- <li><?= $this->Html->link(_('Emprestimos'), ['controller' => 'emprestimos', 'action' => 'index'])?></li> -->
+
+            <li><?php echo $this->Html->link ('<i class="fa fa-list-alt fa-lg"></i>' . ' Empréstimos', array (
+                                    'controller' => 'emprestimos',
+                                    'action' => 'index'
+                            ), array (
+                                    'escape' => false
+                            ) );?></li>
             <!-- <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Editoras'), ['controller' => 'editoras', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li> -->
             <li><?php
-                    echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' equipe', ($this->fetch ( 'title' ) === 'home') ? '#team' : '/#team', array (
+                    echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' equipe', ($this->fetch ( 'title' ) === 'index') ? '#team' : '/#team', array (
                             'escape' => false,
                             'id' => 'team-link'
                     ) );

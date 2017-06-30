@@ -20,7 +20,7 @@
                         <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div>
-                <?= $this->Form->button(__('Login'),['class' => 'btn btn-success']); ?>
+                <?= $this->Form->button(__('Login'),['class' => 'btn btn-success sign-in']); ?>
 				<?= $this->Form->end() ?>
                 <div class="cadastro btn btn-default">                    
                 <?= $this->Html->link(__('Cadastre-se'),['class' => 'btn btn-default','action' => 'add']) ?>
@@ -38,6 +38,20 @@
 /*
  * General styles
  */
+ .sign-in{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+ }
+ .cadastro{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+ }
  .cadastro a{
     
     text-decoration: none;
