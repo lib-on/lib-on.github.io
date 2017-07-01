@@ -14,16 +14,33 @@
             </ul>
         </div>
         <div class="col-sm-9">
+            <div class="placeholdered">    
             <?= $this->Form->create($categoria) ?>
-            <fieldset>
-                <legend><?= __('Add Categoria') ?></legend>
+            <fieldset class="place">
+                <legend class="font"><?= __('Add Categoria') ?></legend>
                 <?php
                     echo $this->Form->control('identificador', ['class' => 'form-control', 'placeholder' => 'Selecione o identificador']);
                     echo $this->Form->control('descricao', ['class' => 'form-control', 'placeholder' => 'Digite a descrição']);
                 ?>
             </fieldset><br>
-            <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
+            <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-5 col-md-2 btn btn-primary']) ?>
             <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>
+
+<style type="text/css">
+    
+    .place {
+        font-size: 1.5em;
+    }
+    .font {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .placeholdered {
+        font-size: 1.5em;
+    }
+
+</style>

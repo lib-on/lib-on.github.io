@@ -10,9 +10,9 @@
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <!-- <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li> -->
             </ul>
-        </div>
+        </div> 
         <div class="col-sm-9 col-sm-6">
-                <div class="placeholdered">
+            <div class="placeholdered">
             <?= $this->Form->create($user) ?>
             <fieldset class="place">
                 <legend class="font"><?= __('Cadastrar Usuário') ?></legend>
@@ -35,12 +35,13 @@
             <br>
             <?= $this->Form->button(__('Submit'), ['class' => 'col-md-offset-5 col-md-2 btn btn-primary']) ?>
             <?= $this->Form->end() ?>
-                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <style type="text/css">
+    
     .place {
         font-size: 1.5em;
     }
@@ -51,6 +52,5 @@
     .placeholdered {
         font-size: 1.5em;
     }
-
 
 </style>
