@@ -8,16 +8,16 @@
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('Edit Livro'), ['action' => 'edit', $livro->id]) ?> </li>
-                <li><?= $this->Form->postLink(__('Delete Livro'), ['action' => 'delete', $livro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?> </li>
-                <li><?= $this->Html->link(__('List Livros'), ['action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Livro'), ['action' => 'add']) ?> </li>
-                <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?> </li>
-                <li><?= $this->Html->link(__('List Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?> </li>
-                <li><?= $this->Html->link(__('List Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?> </li>
+                <li><?= $this->Html->link(__('Editar Livro'), ['action' => 'edit', $livro->id]) ?> </li>
+                <li><?= $this->Form->postLink(__('Deletar Livro'), ['action' => 'delete', $livro->id], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?> </li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['action' => 'add']) ?> </li>
+                <li><?= $this->Html->link(__('Listar Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Nova Categoria'), ['controller' => 'Categorias', 'action' => 'adicionar']) ?> </li>
+                <li><?= $this->Html->link(__('Listar Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Nova Editora'), ['controller' => 'Editoras', 'action' => 'adicionar']) ?> </li>
+                <li><?= $this->Html->link(__('Listar Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Novo Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'adicionar']) ?> </li>
             </ul>
         </div>
         <div class="col-sm-9">

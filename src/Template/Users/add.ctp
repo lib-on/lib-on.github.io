@@ -24,7 +24,7 @@
                     echo $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'Digite email']);
                     echo $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario']);
                     echo $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****']);
-                    echo $this->Form->control('role', [
+                    echo $this->Form->control('Função', [
                                             'options' => ['Students' => 'Aluno',
                                                 'Employee' => 'Administrador',
                                                 'Teacher' => 'Professor',
