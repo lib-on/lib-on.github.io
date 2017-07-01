@@ -1,0 +1,11 @@
+{
+	"require" : {},
+	"require-dev" : {
+		"phpunit/phpunit" : "*"	
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Tests\\" : "test/"
+		}
+	}
+}
