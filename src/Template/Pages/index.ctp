@@ -22,9 +22,10 @@
     }
     
   .carousel-inner img{
-      width: 70%; /* Set width to 100% */
+      width: 100%; /* Set width to 100% */
+      /*height: 300px;*/
       margin: auto;
-      max-height: 100%;
+      max-height: 200%;
       overflow: hidden;
   }
 
@@ -56,7 +57,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="img/biblioteca1.jpeg" alt="Image">
+        <img src="img/modelos/biblioteca1.jpeg" alt="Image">
         <div class="carousel-caption">
           <h3>LIB-on</h3>
           <p>Sistema de Gerenciamento de bibliotecas, fácil, prático e rápido.</p>
@@ -64,10 +65,10 @@
       </div>
 
       <div class="item">
-        <img src="img/biblioteca2.jpeg " alt="Image">
+        <img src="img/modelos/biblioteca2.jpeg " alt="Image">
         <div class="carousel-caption">
-          <h3>Lib-on</h3>
-          <p>Lorem ipsum...</p>
+          <h3>LIB-on</h3>
+          <p>Interatividade, usabilidade, facilidade</p>
         </div>      
       </div>
     </div>
@@ -93,7 +94,7 @@
             'name' => 'Obede Oliveira da Silva',
             'company' => 'IFPE',
             'year' => '2017',
-            'photo' => 'obede.jpg',
+            'photo' => 'Obede.jpg',
             'about' => [
             //aqui escrever sobre si.
               'Obede Oliveira da Silva' => 'Estudante IFPE.'
@@ -112,7 +113,7 @@
             'name' => 'Kaline Marculino',
             'company' => 'IFPE',
             'year' => '2017',
-            'photo' => 'kaline.jpg',
+            'photo' => 'Kaline.jpg',
             'about' => [
               'Kaline Marculino' => 'Estudante IFPE.'
             ],
@@ -201,11 +202,15 @@
   <p>Avenida Alfredo Bandeira de Melo, BR 101 norte - km 44
   Centro, Igarassu - PE, Cep: 53610-000<br>
   Fale conosco:
-  lib.onsystem@gmail.com
-  (81) 7346 - 0307</p> 
+  E-mail: lib.onsystem@gmail.com
+  Fone: (81) 7346 - 0307</p> 
 </footer>
 
 <style type="text/css">
+  
+  footer {
+    background-image: linear-gradient(to bottom, #7ACDD1 0px, #EDF9F9 100%); 
+  }
   .img-responsive{
     border-radius: 50%;
     max-width: 400px;
