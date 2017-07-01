@@ -8,9 +8,9 @@
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('New Editora'), ['action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Nova Editora'), ['action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -35,9 +35,9 @@
                         <td><?= h($editora->endereco) ?></td>
                         <td><?= h($editora->email) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $editora->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $editora->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $editora->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $editora->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Editar'), ['action' => 'edit', $editora->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $editora->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

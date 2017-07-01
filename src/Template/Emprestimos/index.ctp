@@ -7,10 +7,10 @@
     <div class="row content">
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
-                <li class="heading"><?= __('Actions') ?></li>
-                <li><?= $this->Html->link(__('New Emprestimo'), ['action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+                <!-- <li class="heading"><?= __('Actions') ?></li> -->
+                <li><?= $this->Html->link(__('Novo Emprestimo'), ['action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -37,9 +37,9 @@
                         <td><?= h($emprestimo->data_emprestimo) ?></td>
                         <td><?= h($emprestimo->data_entrega) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $emprestimo->id]) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $emprestimo->id]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $emprestimo->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Editar'), ['action' => 'edit', $emprestimo->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

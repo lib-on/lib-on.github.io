@@ -68,9 +68,9 @@
                         <td><?= h($emprestimos->id_usuario) ?></td>
                         <td><?= h($emprestimos->codigo_livros) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos]) ?>
-                            <?= $this->Html->link(__('Edit'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos]) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimos)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos]) ?>
+                            <?= $this->Html->link(__('Editar'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos]) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimos)]) ?>
                         </td>
                     </tr>
                    <?php endforeach; ?> 

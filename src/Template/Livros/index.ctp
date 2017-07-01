@@ -9,13 +9,13 @@ use Cake\ORM\TableRegistry;
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('New Livro'), ['action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('List Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('List Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('List Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Nova Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Nova Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -46,9 +46,9 @@ use Cake\ORM\TableRegistry;
                         <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
                         <td></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -9,11 +9,11 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('Edit Editora'), ['action' => 'edit', $editora->id]) ?> </li>
-                <li><?= $this->Form->postLink(__('Delete Editora'), ['action' => 'delete', $editora->id], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?> </li>
-                <li><?= $this->Html->link(__('List Editoras'), ['action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Editora'), ['action' => 'add']) ?> </li>
-                <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
+                <li><?= $this->Form->postLink(__('Deletar Editora'), ['action' => 'delete', $editora->id], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?> </li>
+                <li><?= $this->Html->link(__('Listar Editoras'), ['action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Nova Editora'), ['action' => 'add']) ?> </li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -64,9 +64,9 @@
                         <td><?= h($livros->categoria_id) ?></td>
                         <td><?= h($livros->editora_id) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Edit'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Editar'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

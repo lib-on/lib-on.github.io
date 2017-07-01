@@ -9,20 +9,20 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Delete'),
+                        __('Deletar'),
                         ['action' => 'delete', $categoria->id],
                         ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id)]
                     )
-                ?></li>
-                <li><?= $this->Html->link(__('List Categorias'), ['action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+                    ?></li>
+                <li><?= $this->Html->link(__('Listar Categorias'), ['action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
         <div class="ccol-sm-9">
             <?= $this->Form->create($categoria) ?>
             <fieldset>
-                <legend><?= __('Edit Categoria') ?></legend>
+                <legend><?= __('Editar Categoria') ?></legend>
                 <?php
                     echo $this->Form->control('identificador', ['class' => 'form-control']);
                     echo $this->Form->control('descricao', ['class' => 'form-control']);

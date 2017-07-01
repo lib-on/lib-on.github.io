@@ -9,7 +9,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Delete'),
+                        __('Deletar'),
                         ['action' => 'delete', $livro->id],
                         ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]
                     )
@@ -27,7 +27,7 @@
         <div class="col-sm-9">
             <?= $this->Form->create($livro) ?>
             <fieldset>
-                <legend><?= __('Edit Livro') ?></legend>
+                <legend><?= __('Editar Livro') ?></legend>
                 <?php
                     echo $this->Form->control('titulo', ['class' => 'form-control']);
                     echo $this->Form->control('isbn', ['class' => 'form-control']);

@@ -9,20 +9,20 @@
             <ul class="nav nav-pills nav-stacked">
          <!--li class="heading"><?= __('Actions') ?></li-->
         <li><?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $livroFisico->id],
                 ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]
             )
         ?></li>
-        <li><?= $this->Html->link(__('List Livro Fisico'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Livro Fisico'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
     </ul>
 </div>
 <div class="livroFisico form large-9 medium-8 columns content">
     <?= $this->Form->create($livroFisico) ?>
     <fieldset>
-        <legend><?= __('Edit Livro Fisico') ?></legend>
+        <legend><?= __('Editar Livro Fisico') ?></legend>
         <?php
             echo $this->Form->control('livros_id', ['options' => $livros]);
             echo $this->Form->control('alugado');

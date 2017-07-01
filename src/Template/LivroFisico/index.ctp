@@ -7,10 +7,10 @@
     <div class="row content">
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Livro Fisico'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        <!-- <li class="heading"><?= __('Actions') ?></li> -->
+        <li><?= $this->Html->link(__('Novo Livro Fisico'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
     </ul>
 </div>
 <div class="col-sm-9">
@@ -31,9 +31,9 @@
                 <td><?= h($livroFisico->alugado == 1 ? 'alugado' : '') ?></td>
                 <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $livroFisico->id], ['class' => 'btn btn-info']) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $livroFisico->id],  ['class' => 'btn btn-default']) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $livroFisico->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]) ?>
+                    <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $livroFisico->id], ['class' => 'btn btn-info']) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livroFisico->id],  ['class' => 'btn btn-default']) ?>
+                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livroFisico->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livroFisico->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

@@ -9,20 +9,20 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Delete'),
+                        __('Deletar'),
                         ['action' => 'delete', $editora->id],
                         ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]
                     )
                 ?></li>
-                <li><?= $this->Html->link(__('List Editoras'), ['action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('List Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('New Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('Listar Editoras'), ['action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
         <div class="editoras form large-9 medium-8 columns content">
             <?= $this->Form->create($editora) ?>
             <fieldset>
-                <legend><?= __('Edit Editora') ?></legend>
+                <legend><?= __('Editar Editora') ?></legend>
                 <?php
                     echo $this->Form->control('nome', ['class' => 'form-control']);
                     echo $this->Form->control('contato', ['class' => 'form-control']);
