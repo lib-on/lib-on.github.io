@@ -122,6 +122,10 @@ class UsersController extends AppController
             // $this->Auth->allow(['add', 'edit', 'delete', 'login','logout']);
         }
         $this->Auth->allow(['add', 'login','logout']);
+
+        // if ($this->request->getParam('prefix') === 'aluno_id') {
+        //     return (bool)($user['role'] === 'aluno_id');
+        // }
     }
 
     public function login()

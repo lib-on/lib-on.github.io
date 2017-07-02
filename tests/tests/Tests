@@ -3,7 +3,7 @@ namespace Tests;
 
 class SimpleTest extends \PHPUnit_Framework_TestCase
 {
-	public function testReturnTrue()
+	public function testReturnFalse()
 	{
 		$this->assertTrue(true);
 	}
