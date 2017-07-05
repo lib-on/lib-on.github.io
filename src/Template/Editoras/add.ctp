@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
   * @var \App\View\AppView $this
   */
@@ -13,7 +13,7 @@
                 <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9 col-sm-6">
             <div class="placeholdered">
             <?= $this->Form->create($editora) ?>
             <fieldset class="place">

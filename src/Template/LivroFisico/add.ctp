@@ -20,8 +20,8 @@
                 <legend class="font"><?= __('Adicionar Livro Fisico') ?></legend>
                 <?php
                     echo $this->Form->control('livros_id', ['options' => $livros, 'empty' => true]);
+                    echo $this->Form->control('codigo_livro', ['class' => 'form-control', 'placeholder' => 'Digite o codigo do livro']);
                     echo $this->Form->control('alugado');
-                    echo $this->Form->control('codigo_livro');
                 ?>
             </fieldset><br>
             <?= $this->Form->button(__('Submit'), ['class' => 'col-md-offset-5 col-md-2 btn btn-primary']) ?>

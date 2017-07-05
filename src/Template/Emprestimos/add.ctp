@@ -3,35 +3,35 @@
   * @var \App\View\AppView $this
   */
     use Cake\Routing\Router;
-    use Cake\ORM\TableRegistry;
-?>
+    // use Cake\ORM\TableRegistry;
+?> 
 <div class="container-fluid" id="actions-sidebar">
     <div class="row content">
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
-        <!--li class="heading"><?= __('Actions') ?></li-->
-        <li><?= $this->Html->link(__('Listar Emprestimos'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
-    </ul>
+                <!--li class="heading"><?= __('Actions') ?></li-->
+                <li><?= $this->Html->link(__('Listar Emprestimos'), ['action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-sm-6">
+        <div class="placeholdered">
+            <?= $this->Form->create($emprestimo) ?>
+            <fieldset class="place">
+                <legend class="font"><?= __('Adicionar Emprestimo') ?></legend>
+                <?php
+                    echo $this->Form->control('livro_id', ['options' => $livros]);
+                    echo $this->Form->control('id_usuario', ['options' => $users]);
+                    echo $this->Form->control('identificador_livro', ['options' => $livroFisico, 'placeholder' => 'Digite o id do livro']);
+                    echo $this->Form->control('data_emprestimo', ['placeholder' => 'Digite a data do emprestimo']);
+                    echo $this->Form->control('data_entrega',['placeholder' => 'Digite a data de entrega']);
+                ?>
+            </fieldset><br>
+        <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-5 col-md-2 btn btn-primary']) ?>
+        <?= $this->Form->end() ?>
+    </div>
 </div>
-<div class="col-sm-9">
-    <?= $this->Form->create($emprestimo) ?>
-    
-    <fieldset>
-        <legend><?= __('Adicionar Emprestimo') ?></legend>
-        <?php
-            echo $this->Form->control('livro_id', ['options' => $livros]);
-            echo $this->Form->control('id_usuario', ['options' => $users]);
-            echo $this->Form->control('identificador_livro', ['options' => $livroFisico, 'placeholder' => 'Digite o id do livro']);
-            echo $this->Form->control('data_emprestimo', ['placeholder' => 'Digite a data do emprestimo']);
-            echo $this->Form->control('data_entrega',['placeholder' => 'Digite a data de entrega']);
-        ?>
-    </fieldset><br>
-    <?= $this->Form->button(__('Submit'), ['type'=>'submit','class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
-    <?= $this->Form->end() ?>
-</div>
-
 <script type="text/javascript">
 
     // var substringMatcher = function(strs) {
@@ -100,4 +100,17 @@
 
 </div>
 </div>
+<style type="text/css">
+    
+    .place {
+        font-size: 1.5em;
+    }
+    .font {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .placeholdered {
+        font-size: 1.5em;
+    }
 
+</style>

@@ -40,5 +40,6 @@ class AppView extends View
     'className' => 'Bootstrap.Html',
     // Other configuration options...
 ]);
+    $this->loadHelper('Form', ['className' => 'Bootstrap.Form']);        
     }
 }
