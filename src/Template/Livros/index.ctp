@@ -2,7 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
-    $this->assign('title', 'Livros');
+    $this->assign('title', 'Liv');
 use Cake\ORM\TableRegistry;
 ?>
 <div class="container-fluid">
@@ -45,7 +45,6 @@ use Cake\ORM\TableRegistry;
                         <td><?= h($livro->autor) ?></td>
                         <td><?= $livro->has('categoria') ? $this->Html->link($livro->categoria->identificador, ['controller' => 'Categorias', 'action' => 'view', $livro->categoria->id]) : '' ?></td>
                         <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
-                        <td></td>
                         <td class="actions">
                             <?= $this->Html->link(__(' Visualizar'), ['action' => 'view', $livro->id], ['class' => 'fa fa-eye btn btn btn-info']) ?>
                             <?= $this->Html->link(__(' Editar'), ['action' => 'edit', $livro->id], ['class' => 'fa fa-pencil-square btn btn-default']) ?>
