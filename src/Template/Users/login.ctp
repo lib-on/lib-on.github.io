@@ -22,7 +22,7 @@
                 </div>
                 <?= $this->Form->button(__('Login'),['class' => 'btn btn-success sign-in']); ?>
 				<?= $this->Form->end() ?>
-                <div class="cadastro btn btn-default">                    
+                <div class="cadastro">                    
                 <?= $this->Html->link(__('Cadastre-se'),['class' => 'btn btn-default','action' => 'add']) ?>
                 </div>
 			</form>
@@ -40,18 +40,15 @@
  */
  .sign-in{
     text-align: center;
-    padding-left: 20%;
-    padding-right: 15%;
-    margin-left: 30%;
-    margin-right: 20%;
-    margin-bottom: 10%;
+padding-left: 100px;
+padding-right: 100px;
+margin-left: 10px;
+margin-right: auto;
+margin-bottom: 10px;
+text-align: center;
  }
  .cadastro{
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 10px;
+    text-align: center;
  }
  .cadastro a{
     
