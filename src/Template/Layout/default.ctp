@@ -23,7 +23,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <title>
         <?= $this->fetch('title') ?>
     </title>
-    
+    <?= $this->Html->meta('icon') ?>
 
     <!-- <?= $this->Html->css('base.css') ?> -->
     <!-- <?= $this->Html->css('cake.css') ?> -->
@@ -133,11 +133,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
              ?>
                 <ul>
                     
-                <li><?php echo '<i class="fa fa-id-card" aria-hidden="true"></i> '. $user ?></li>
-                <li><?php echo $this->Html->link ( 'Sair', array (
+                <li><?php echo $this->Html->link ( '<i class="fa fa-sign-out" aria-hidden="true"></i>' . 'Sair', array (
                                 'controller' => 'users',
                                 'action' => 'logout'
                             ), array ('escape' => false ) ); ?></li>
+                <li><?php echo '<i class="fa fa-id-card" aria-hidden="true"></i> '. $user ?></li>
                 </ul>
             
              <?php 
@@ -187,10 +187,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         .navbar-nav li{
             font-weight: 400;
-            font-style: normal;
+            font-style: none;
             font-family: verdana;
             color: #FFF;
 
+        }
+        .navbar-right ul li{
+            float: right;
+            font-weight: 400;
+            font-family: verdana;
+            list-style: none;
+            padding: 15px;
+            color: #000;
         }
         .navbar-inverse .navbar-nav>li>a {
             color: #171212;
