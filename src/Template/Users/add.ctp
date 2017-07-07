@@ -34,7 +34,7 @@
                 ?>
             </fieldset>
             <br>
-            <?= $this->Form->button(__('Submit'), ['class' => 'col-md-offset-5 col-md-2 btn btn-primary']) ?>
+            <?= $this->Form->button(__('Cadastrar'), ['class' => 'col-md-offset-5 col-md-2 btn btn-primary']) ?>
             <?= $this->Form->end() ?>
             </div>
         </div>
