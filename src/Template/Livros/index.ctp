@@ -9,13 +9,13 @@ use Cake\ORM\TableRegistry;
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('Novo Livro'), ['action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('Listar Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('Nova Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('Listar Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('Nova Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?></li>
-                <li><?= $this->Html->link(__('Listar Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('Novo Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__(' Novo Livro'), ['action' => 'add'], ['class' => 'fa fa-plus-square']) ?></li>
+                <!-- <li><?= $this->Html->link(__('Listar Categorias'), ['controller' => 'Categorias', 'action' => 'index']) ?></li> -->
+                <!-- <li><?= $this->Html->link(__('Nova Categoria'), ['controller' => 'Categorias', 'action' => 'add']) ?></li> -->
+                <!-- <li><?= $this->Html->link(__('Listar Editoras'), ['controller' => 'Editoras', 'action' => 'index']) ?></li> -->
+                <!-- <li><?= $this->Html->link(__('Nova Editora'), ['controller' => 'Editoras', 'action' => 'add']) ?></li> -->
+                <!-- <li><?= $this->Html->link(__('Listar Emprestimos'), ['controller' => 'Emprestimos', 'action' => 'index']) ?></li> -->
+                <!-- <li><?= $this->Html->link(__('Novo Emprestimo'), ['controller' => 'Emprestimos', 'action' => 'add']) ?></li> -->
             </ul>
         </div>
         <div class="col-sm-9">
@@ -46,9 +46,9 @@ use Cake\ORM\TableRegistry;
                         <td><?= $livro->has('editora') ? $this->Html->link($livro->editora->nome, ['controller' => 'Editoras', 'action' => 'view', $livro->editora->id]) : '' ?></td>
                         <td></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livro->id)]) ?>
+                            <?= $this->Html->link(__(' Visualizar'), ['action' => 'view', $livro->id], ['class' => 'fa fa-eye btn btn btn-info']) ?>
+                            <?= $this->Html->link(__(' Editar'), ['action' => 'edit', $livro->id], ['class' => 'fa fa-pencil-square btn btn-default']) ?>
+                            <?= $this->Form->postLink(__(' Deletar'), ['action' => 'delete', $livro->id], ['class' => 'fa fa-trash btn btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livro->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

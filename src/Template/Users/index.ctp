@@ -42,9 +42,9 @@
                         <td><?= h($user->created) ?></td>
                         <td><?= h($user->modified) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]) ?>
+                            <!-- <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class' => 'btn btn-info']) ?> -->
+                            <?= $this->Html->link(__(' Edit'), ['action' => 'edit', $user->id], ['class' => 'fa fa-pencil-square btn btn-default']) ?>
+                            <?= $this->Form->postLink(__(' Delete'), ['action' => 'delete', $user->id], ['class' => 'fa fa-trash btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

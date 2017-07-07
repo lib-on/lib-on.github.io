@@ -12,8 +12,8 @@
         <li><?= $this->Form->postLink(__('Deletar Livro Fisico'), ['action' => 'delete', $livroFisico->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livroFisico->id)]) ?> </li>
         <li><?= $this->Html->link(__('Listar Livro Fisico'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Novo Livro Fisico'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
+        <!-- <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li> -->
     </ul>
 </div>
 <div class="col-sm-9">

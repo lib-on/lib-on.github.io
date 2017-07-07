@@ -96,6 +96,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <!-- <li><?= $this->Html->link(_('Usuarios'), ['controller' => 'users', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Editoras'), ['controller' => 'editoras', 'action' => 'index'])?></li>
             <li><?= $this->Html->link(_('Categorias'), ['controller' => 'categorias', 'action' => 'index'])?></li> -->
+           <li><?php echo $this->Html->link ('<i class="fa fa fa-list fa-lg"></i>' . ' Categorias', array (
+                                    'controller' => 'categorias',
+                                    'action' => 'index'
+                            ), array (
+                                    'escape' => false
+                            ) );?></li>
+
+
+            <li><?php echo $this->Html->link ('<i class="fa fa-reorder fa-lg"></i>' . ' Editoras', array (
+                                    'controller' => 'editoras',
+                                    'action' => 'index'
+                            ), array (
+                                    'escape' => false
+                            ) );?></li>
+
+
             <li><?php
                     echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' equipe', ($this->fetch ( 'title' ) === 'index') ? '#team' : '/#team', array (
                             'escape' => false,

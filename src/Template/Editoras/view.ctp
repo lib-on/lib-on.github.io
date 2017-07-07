@@ -12,8 +12,8 @@
                 <li><?= $this->Form->postLink(__('Deletar Editora'), ['action' => 'delete', $editora->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $editora->id)]) ?> </li>
                 <li><?= $this->Html->link(__('Listar Editoras'), ['action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('Nova Editora'), ['action' => 'add']) ?> </li>
-                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li>
+                <!-- <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?> </li> -->
             </ul>
         </div>
         <div class="col-sm-9">
@@ -64,9 +64,9 @@
                         <td><?= h($livros->categoria_id) ?></td>
                         <td><?= h($livros->editora_id) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Visualizar'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
-                            <?= $this->Html->link(__('Editar'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livros->id)]) ?>
+                            <?= $this->Html->link(__(' Visualizar'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'fa fa-eye btn btn-info']) ?>
+                            <?= $this->Html->link(__(' Editar'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'fa fa-pencil-square btn btn-default']) ?>
+                            <?= $this->Form->postLink(__(' Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'fa fa-trash btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livros->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

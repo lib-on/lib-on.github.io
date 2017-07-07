@@ -8,9 +8,9 @@
         <div class="col-sm-3 sidenav" id="actions-sidebar">
             <ul class="nav nav-pills nav-stacked">
         <!-- <li class="heading"><?= __('Actions') ?></li> -->
-        <li><?= $this->Html->link(__('Novo Livro Fisico'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__(' Novo Livro Fisico'), ['action' => 'add'], ['class' => 'fa fa-plus-square']) ?></li>
+        <li><?= $this->Html->link(__(' Listar Livros'), ['controller' => 'Livros', 'action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+        <li><?= $this->Html->link(__(' Novo Livro'), ['controller' => 'Livros', 'action' => 'add'], ['class' => '    fa fa-plus-square']) ?></li> 
     </ul>
 </div>
 <div class="col-sm-9">
@@ -31,9 +31,9 @@
                 <td><?= h($livroFisico->alugado == 1 ? 'alugado' : '') ?></td>
                 <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $livroFisico->id], ['class' => 'btn btn-info']) ?>
-                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livroFisico->id],  ['class' => 'btn btn-default']) ?>
-                    <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livroFisico->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livroFisico->id)]) ?>
+                    <?= $this->Html->link(__(' Visualizar'), ['action' => 'view', $livroFisico->id], ['class' => 'fa fa-eye btn btn-info']) ?>
+                    <?= $this->Html->link(__(' Editar'), ['action' => 'edit', $livroFisico->id],  ['class' => 'fa fa-pencil-square btn btn-default']) ?>
+                    <?= $this->Form->postLink(__(' Deletar'), ['action' => 'delete', $livroFisico->id], ['class' => 'fa fa-trash btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livroFisico->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
