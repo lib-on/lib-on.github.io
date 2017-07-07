@@ -19,7 +19,7 @@
             <table cellpadding="0" cellspacing="0" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+                        <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                         <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('contato') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('endereço') ?></th>
@@ -30,7 +30,7 @@
                 <tbody>
                     <?php foreach ($editoras as $editora): ?>
                     <tr>
-                        <td><?= $this->Number->format($editora->id) ?></td>
+                        <!-- <td><?= $this->Number->format($editora->id) ?></td> -->
                         <td><?= h($editora->nome) ?></td>
                         <td><?= h($editora->contato) ?></td>
                         <td><?= h($editora->endereco) ?></td>

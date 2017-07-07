@@ -23,14 +23,14 @@
                     echo $this->Form->control('nome', ['class' => 'form-control my-input', 'placeholder' => 'Digite seu nome']);
                     echo $this->Form->control('matricula', ['class' => 'form-control', 'placeholder' => 'Digite matricula']);
                     echo $this->Form->control('email', ['class' => 'form-control', 'placeholder' => 'Digite email']);
-                    echo $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario']);
-                    echo $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****']);
-                    echo $this->Form->control('Função', [
-                                            'options' => ['Students' => 'Aluno',
+                    echo $this->Form->control('username', ['class' => 'form-control', 'placeholder' => 'Digite seu usuario', 'label' => 'usuário']);
+                    echo $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '*****', 'label' => 'senha']);
+                    echo $this->Form->control('role', [
+                                            'options' => [/*'Students' => 'Aluno',
                                                 'Employee' => 'Administrador',
-                                                'Teacher' => 'Professor',
+                                                'Teacher' => 'Professor',*/
 
-                                                'Librarian' => 'bibliotecária'], 'class' => 'form-control' ]);
+                                                'Librarian' => 'bibliotecário(a)'], 'class' => 'form-control', 'label' => 'função' ]);
                 ?>
             </fieldset>
             <br>

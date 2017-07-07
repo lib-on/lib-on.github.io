@@ -18,11 +18,11 @@
     <table  class="table table-striped table-bordered">
         <thead class="thead-inverse">
             <tr>
-    <h3><?= __('Livro Fisico') ?></h3>
+    <h3><?= __('Acervo') ?></h3>
                 <th scope="col"><?= $this->Paginator->sort('livros_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('alugado') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('codigo_livro') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <!-- <th scope="col" class="actions"><?= __('Actions') ?></th> -->
             </tr>
         </thead>
         <tbody>
@@ -31,11 +31,11 @@
                 <td><?= $livroFisico->has('livro') ? $this->Html->link($livroFisico->livro->titulo, ['controller' => 'Livros', 'action' => 'view', $livroFisico->livro->titulo]) : '' ?></td>
                 <td><?= h($livroFisico->alugado == 1 ? 'alugado' : '') ?></td>
                 <td><?= $this->Number->format($livroFisico->codigo_livro) ?></td>
-                <td class="actions">
+                <!-- <td class="actions">
                     <?= $this->Html->link(__(' Visualizar'), ['action' => 'view', $livroFisico->id], ['class' => 'fa fa-eye btn btn-info']) ?>
                     <?= $this->Html->link(__(' Editar'), ['action' => 'edit', $livroFisico->id],  ['class' => 'fa fa-pencil-square btn btn-default']) ?>
                     <?= $this->Form->postLink(__(' Deletar'), ['action' => 'delete', $livroFisico->id], ['class' => 'fa fa-trash btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livroFisico->id)]) ?>
-                </td>
+                </td> -->
             </tr>
             <?php endforeach; ?>
         </tbody>
