@@ -1,5 +1,6 @@
 <?php
 	use Cake\View\Helper\HtmlHelper;
+        $this->assign('title', 'Login');
  ?>
 
 <div class="users form">

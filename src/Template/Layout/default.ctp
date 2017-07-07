@@ -113,7 +113,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
 
             <li><?php
-                    echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' equipe', ($this->fetch ( 'title' ) === 'index') ? '#team' : '/#team', array (
+                    echo $this->Html->link ( '<i class="fa fa-hand-peace-o"></i>' . ' Equipe', ($this->fetch ( 'title' ) === 'index') ? '#team' : '/#team', array (
                             'escape' => false,
                             'id' => 'team-link'
                     ) );
@@ -180,10 +180,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             cursor: default;
         }
         .navbar-inverse {
-            background-image: linear-gradient(to bottom, #7ACDD1 0px, #EDF9F9 100%);
+            background-image: linear-gradient(to bottom, #0B9BA2 0px, #70D8D8 100%);
             background-repeat: repeat-x;
             border-radius: 0px;
-            border-color: #FFF;
+            border-color: linear-gradient(to bottom, #0B9BA2 0px, #70D8D8 100%);
         }
         .navbar-nav li{
             font-weight: 400;
@@ -202,6 +202,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         }
         .navbar-inverse .navbar-nav>li>a {
             color: #171212;
+        }
+        .navbar-inverse .navbar-brand {
+            color: #FFF;
         }
     </style>
     <footer>

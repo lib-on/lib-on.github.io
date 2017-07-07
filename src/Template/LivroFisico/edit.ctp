@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+    $this->assign('title', 'Acervo');
 ?>
 <div class="container-fluid" id="actions-sidebar">
     <div class="row content">
@@ -26,7 +27,7 @@
             <fieldset class="place">
                 <legend class="font"><?= __('Editar Livro Fisico') ?></legend>
                 <?php
-                    echo $this->Form->control('livros_id', ['options' => $livros]);
+                    echo $this->Form->control('livros_id', ['options' => $books]);
                     echo $this->Form->control('alugado');
                     echo $this->Form->control('codigo_livro' , ['class' => 'form-control', 'placeholder' => 'Digite o codigo do livro']);
                 ?>

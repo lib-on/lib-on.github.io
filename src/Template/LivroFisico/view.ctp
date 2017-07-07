@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+    $this->assign('title', 'Acervo');
 ?>
 <div class="container-fluid" id="actions-sidebar">
     <div class="row content">

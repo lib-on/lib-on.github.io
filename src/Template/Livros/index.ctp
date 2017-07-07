@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+    $this->assign('title', 'Livros');
 use Cake\ORM\TableRegistry;
 ?>
 <div class="container-fluid">

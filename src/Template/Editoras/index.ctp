@@ -2,6 +2,7 @@
 /**
   * @var \App\View\AppView $this
   */
+
 ?>
 <div class="container-fluid">
     <div class="row content">

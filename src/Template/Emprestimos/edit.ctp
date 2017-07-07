@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-sm-3 sidenav" id="actions-sidebar">
-            <ul class="side-nav">
+            <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
                         __(' Deletar'),
@@ -15,7 +15,7 @@
                         ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $emprestimo->id)]
                     )
                 ?></li>
-                <li><?= $this->Html->link(__(' Listar Emprestimos'), ['action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+                <!-- <li><?= $this->Html->link(__(' Listar Emprestimos'), ['action' => 'index'], ['class' => 'fa fa-server']) ?></li> -->
                 <li><?= $this->Html->link(__(' Listar Livros'), ['controller' => 'Livros', 'action' => 'index'], ['class' => 'fa fa-server']) ?></li>
                 <li><?= $this->Html->link(__(' Novo Livro'), ['controller' => 'Livros', 'action' => 'add'], ['class' => 'fa fa-plus-square']) ?></li>
             </ul>

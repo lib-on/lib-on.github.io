@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+  $this->assign('title', 'Lib-on');
+?>
 	<!DOCTYPE html>
 <html lang="en">
 <head>
