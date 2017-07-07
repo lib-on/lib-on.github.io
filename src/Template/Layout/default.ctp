@@ -40,8 +40,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body
->
+<body>
     <div class="message">
 
     </div>
@@ -128,7 +127,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
              <?php 
                 }else{
              ?>
-                    <li><?php echo $this->Html->link ('<i class="fa fa-sign-in fa-lg"></i>' . ' Login', array (
+                    <li><?php echo $this->Html->link ('<i class="fa fa-sign-in fa-xs"></i>' . ' Login', array (
                                     'controller' => 'users',
                                     'action' => 'login'
                             ), array (

@@ -9,7 +9,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('Edit Editora'), ['action' => 'edit', $editora->id]) ?> </li>
-                <li><?= $this->Form->postLink(__('Deletar Editora'), ['action' => 'delete', $editora->id], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?> </li>
+                <li><?= $this->Form->postLink(__('Deletar Editora'), ['action' => 'delete', $editora->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $editora->id)]) ?> </li>
                 <li><?= $this->Html->link(__('Listar Editoras'), ['action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('Nova Editora'), ['action' => 'add']) ?> </li>
                 <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
@@ -28,7 +28,7 @@
                     <td><?= h($editora->contato) ?></td>
                 </tr>
                 <tr>
-                    <th scope="row"><?= __('Endereco') ?></th>
+                    <th scope="row"><?= __('Endereço') ?></th>
                     <td><?= h($editora->endereco) ?></td>
                 </tr>
                 <tr>
@@ -41,14 +41,14 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Livros') ?></h4>
+                <h4><?= __('Relação Livros') ?></h4>
                 <?php if (!empty($editora->livros)): ?>
                 <table  class="table table-bordered">
                     <tr>
                         <th scope="col"><?= __('Id') ?></th>
                         <th scope="col"><?= __('Titulo') ?></th>
                         <th scope="col"><?= __('Isbn') ?></th>
-                        <th scope="col"><?= __('Edicao') ?></th>
+                        <th scope="col"><?= __('Edição') ?></th>
                         <th scope="col"><?= __('Autor') ?></th>
                         <th scope="col"><?= __('Categoria Id') ?></th>
                         <th scope="col"><?= __('Editora Id') ?></th>
@@ -66,7 +66,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('Visualizar'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Editar'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livros->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -39,7 +39,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $emprestimo->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Editar'), ['action' => 'edit', $emprestimo->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $emprestimo->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $emprestimo->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

@@ -9,7 +9,7 @@
             <ul class="nav nav-pills nav-stacked">
         <!-- <li class="heading"><?= __('Actions') ?></li> -->
         <li><?= $this->Html->link(__('Editar Emprestimo'), ['action' => 'edit', $emprestimo->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Deletar Emprestimo'), ['action' => 'delete', $emprestimo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimo->id)]) ?> </li>
+        <li><?= $this->Form->postLink(__('Deletar Emprestimo'), ['action' => 'delete', $emprestimo->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $emprestimo->id)]) ?> </li>
         <li><?= $this->Html->link(__('Listar Emprestimos'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Novo Emprestimo'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>

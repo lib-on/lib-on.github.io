@@ -9,10 +9,10 @@
         <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
-                <li><?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id]) ?> </li>
-                <li><?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?> </li>
-                <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?> </li>
-                <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?> </li>
+                <li><?= $this->Html->link(__('Editar User'), ['action' => 'edit', $user->id]) ?> </li>
+                <li><?= $this->Form->postLink(__('Deletar User'), ['action' => 'delete', $user->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]) ?> </li>
+                <li><?= $this->Html->link(__('Listar Users'), ['action' => 'index']) ?> </li>
+                <li><?= $this->Html->link(__('Novo User'), ['action' => 'add']) ?> </li>
             </ul>
         </div>
         <div class="col-sm-9">
@@ -39,7 +39,7 @@
                     <td><?= h($user->password) ?></td>
                 </tr> -->
                 <tr>
-                    <th scope="row"><?= __('Role') ?></th>
+                    <th scope="row"><?= __('Função') ?></th>
                     <td><?= h($user->role) ?></td>
                 </tr>
                 <tr>
@@ -47,11 +47,11 @@
                     <td><?= $this->Number->format($user->id) ?></td>
                 </tr>
                 <tr>
-                    <th scope="row"><?= __('Created') ?></th>
+                    <th scope="row"><?= __('Criação') ?></th>
                     <td><?= h($user->created) ?></td>
                 </tr>
                 <tr>
-                    <th scope="row"><?= __('Modified') ?></th>
+                    <th scope="row"><?= __('Modificação') ?></th>
                     <td><?= h($user->modified) ?></td>
                 </tr>
             </table>

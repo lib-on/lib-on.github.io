@@ -17,7 +17,7 @@
 				<?= $this->Form->control('password', ['class' => 'form-control', 'placeholder' => '******']) ?>
 				<div id="remember" class="checkbox">
                     <label>
-                        <input type="checkbox" value="remember-me"> Remember me
+                        <input type="checkbox" value="remember-me"> Lembre-me
                     </label>
                 </div>
                 <?= $this->Form->button(__('Login'),['class' => 'btn btn-success sign-in']); ?>
@@ -39,11 +39,12 @@
  * General styles
  */
  .sign-in{
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 15%;
+    margin-left: 30%;
+    margin-right: 20%;
+    margin-bottom: 10%;
  }
  .cadastro{
     padding-left: 10px;

@@ -23,15 +23,15 @@ use Cake\ORM\TableRegistry;
                 <thead class="thead-inverse">
                     <tr >
             <h3><?= __('Livros') ?></h3>
-                        <!-- <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
-                        <th scope="col"><?= $this->Paginator->sort('titulo') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('isbn') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('edicao') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('autor') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('categoria_id') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('editora_id') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('quantidade') ?></th>
-                        <th scope="col" class="actions"><?= __('Actions') ?></th>
+                        <!-- <th scope="col"><?= $this->Paginator->sort('Id') ?></th> -->
+                        <th scope="col"><?= $this->Paginator->sort('Titulo') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Isbn') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Edição') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Autor') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Categoria_id') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Editora_id') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Quantidade') ?></th>
+                        <th scope="col" class="actions"><?= __('Actions') ?></th> 
                     </tr>
                 </thead>
                 <tbody>
@@ -48,7 +48,7 @@ use Cake\ORM\TableRegistry;
                         <td class="actions">
                             <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $livro->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Editar'), ['action' => 'edit', $livro->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livro->id)]) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $livro->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livro->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

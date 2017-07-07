@@ -32,7 +32,7 @@
                     <td><?= h($livro->isbn) ?></td>
                 </tr>
                 <tr>
-                    <th scope="row"><?= __('Edicao') ?></th>
+                    <th scope="row"><?= __('Edição') ?></th>
                     <td><?= h($livro->edicao) ?></td>
                 </tr>
                 <tr>
@@ -53,9 +53,9 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Emprestimos') ?></h4>
+                <h4><?= __('Relação Emprestimos') ?></h4>
                 <?php if (!empty($livro->emprestimos)): ?>
-                <table cellpadding="0" cellspacing="0">
+                <table  class="table table-bordered">
                     <tr>
                         <th scope="col"><?= __('Livro Id') ?></th>
                         <th scope="col"><?= __('Id Usuario') ?></th>
@@ -66,16 +66,17 @@
                     <tr>
                         <td><?= h($emprestimos->livro_id) ?></td>
                         <td><?= h($emprestimos->id_usuario) ?></td>
-                        <td><?= h($emprestimos->codigo_livros) ?></td>
+                        <td><?= h($emprestimos->codigo_livro) ?></td>
                         <td class="actions">
-                            <?= $this->Html->link(__('Visualizar'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos]) ?>
-                            <?= $this->Html->link(__('Editar'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos]) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos], ['confirm' => __('Are you sure you want to delete # {0}?', $emprestimos)]) ?>
+                            <?= $this->Html->link(__('Visualizar'), ['controller' => 'Emprestimos', 'action' => 'view', $emprestimos->id], ['class' => 'btn btn-info']) ?>
+                            <?= $this->Html->link(__('Editar'), ['controller' => 'Emprestimos', 'action' => 'edit', $emprestimos->id], ['class' => 'btn btn-default']) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Emprestimos', 'action' => 'delete', $emprestimos->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $emprestimos->id)]) ?>
                         </td>
                     </tr>
                    <?php endforeach; ?> 
                 </table>
                <?php endif; ?>
+            </div>
             </div>
         </div>
     </div>

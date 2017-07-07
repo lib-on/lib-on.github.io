@@ -9,18 +9,19 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Delete'),
+                        __('Deletar'),
                         ['action' => 'delete', $user->id],
-                        ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]
+                        ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]
                     )
                 ?></li>
-                <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__('Listar Users'), ['action' => 'index']) ?></li>
             </ul>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-9 col-sm-6">
+            <div class="placeholdered">
             <?= $this->Form->create($user) ?>
-            <fieldset>
-                <legend><?= __('Edit User') ?></legend>
+            <fieldset class="place">
+                <legend class="font"><?= __('Editar User') ?></legend>
                 <?php
                     echo $this->Form->control('nome', ['class' => 'form-control']);
                     echo $this->Form->control('matricula', ['class' => 'form-control']);
@@ -30,8 +31,23 @@
                     echo $this->Form->control('role', ['class' => 'form-control']);
                 ?>
             </fieldset><br>
-            <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-11 col-md-1 btn btn-primary']); ?>
+            <?= $this->Form->button(__('Submit'), ['type'=>'submit', 'class'=>'col-md-offset-5 col-md-2 btn btn-primary']); ?>
             <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>
+<style type="text/css">
+    
+    .place {
+        font-size: 1.5em;
+    }
+    .font {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .placeholdered {
+        font-size: 1.5em;
+    }
+
+</style>

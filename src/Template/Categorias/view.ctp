@@ -9,7 +9,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Html->link(__('Editar Categoria'), ['action' => 'edit', $categoria->id]) ?> </li>
-                <li><?= $this->Form->postLink(__('Deletar Categoria'), ['action' => 'delete', $categoria->id], ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id)]) ?> </li>
+                <li><?= $this->Form->postLink(__('Deletar Categoria'), ['action' => 'delete', $categoria->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $categoria->id)]) ?> </li>
                 <li><?= $this->Html->link(__('Listar Categorias'), ['action' => 'index']) ?> </li>
                 <li><?= $this->Html->link(__('Nova Categoria'), ['action' => 'add']) ?> </li>
                 <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?> </li>
@@ -33,7 +33,7 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Livros') ?></h4>
+                <h4><?= __('Relação Livros') ?></h4>
                 <?php if (!empty($categoria->livros)): ?>
                 <table class="table table-bordered">
                     <tr>
@@ -58,7 +58,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('Visualizar'), ['controller' => 'Livros', 'action' => 'view', $livros->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Editar'), ['controller' => 'Livros', 'action' => 'edit', $livros->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $livros->id)]) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['controller' => 'Livros', 'action' => 'delete', $livros->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livros->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

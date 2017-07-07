@@ -23,9 +23,9 @@
                         <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('username') ?></th>
                         <!-- <th scope="col"><?= $this->Paginator->sort('password') ?></th> -->
-                        <th scope="col"><?= $this->Paginator->sort('role') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('Função') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('criação') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('modificação') ?></th>
                         <th scope="col" class="actions"><?= __('Actions') ?></th>
                     </tr>
                 </thead>
@@ -44,7 +44,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('View'), ['action' => 'view', $user->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

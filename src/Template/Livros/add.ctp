@@ -27,12 +27,12 @@ use Cake\ORM\TableRegistry;
                     
                 <?php
 
-                    echo $this->Form->control('titulo', ['class' => 'form-control my-input', 'placeholder' => 'Digite titulo do livro']);
-                    echo $this->Form->control('isbn', ['class' => 'form-control my-input', 'placeholder' => 'Digite isbn']);
-                    echo $this->Form->control('edicao', ['class' => 'form-control my-input', 'placeholder' => 'Digite edição']);
-                    echo $this->Form->control('autor', ['class' => 'form-control my-input', 'placeholder' => 'Digite autor']);
-                    echo $this->Form->control('categoria_id', ['options' => $categorias, 'empty' => true, 'class' => 'form-control my-input', 'placeholder' => 'Coloque id da categoria']);
-                    echo $this->Form->control('editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control my-input', 'placeholder' => 'Coloque id da editora']);
+                    echo $this->Form->control('Titulo', ['class' => 'form-control my-input', 'placeholder' => 'Digite titulo do livro']);
+                    echo $this->Form->control('Isbn', ['class' => 'form-control my-input', 'placeholder' => 'Digite isbn']);
+                    echo $this->Form->control('Edição', ['class' => 'form-control my-input', 'placeholder' => 'Digite edição']);
+                    echo $this->Form->control('Autor', ['class' => 'form-control my-input', 'placeholder' => 'Digite autor']);
+                    echo $this->Form->control('Categoria_id', ['options' => $categorias, 'empty' => true, 'class' => 'form-control my-input', 'placeholder' => 'Coloque id da categoria']);
+                    echo $this->Form->control('Editora_id', ['options' => $editoras, 'empty' => true, 'class' => 'form-control my-input', 'placeholder' => 'Coloque id da editora']);
                    //debug($identificator);
                 ?>
             

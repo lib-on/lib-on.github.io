@@ -21,7 +21,7 @@
                         <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('contato') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('endereco') ?></th>
+                        <th scope="col"><?= $this->Paginator->sort('endereço') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('email') ?></th>
                         <th scope="col" class="actions"><?= __('Actions') ?></th>
                     </tr>
@@ -37,7 +37,7 @@
                         <td class="actions">
                             <?= $this->Html->link(__('Visualizar'), ['action' => 'view', $editora->id], ['class' => 'btn btn-info']) ?>
                             <?= $this->Html->link(__('Editar'), ['action' => 'edit', $editora->id], ['class' => 'btn btn-default']) ?>
-                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $editora->id], ['class' => 'btn btn-danger'], ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]) ?>
+                            <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $editora->id], ['class' => 'btn btn-danger'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $editora->id)]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

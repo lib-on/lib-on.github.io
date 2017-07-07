@@ -11,7 +11,7 @@
                 <li><?= $this->Form->postLink(
                         __('Deletar'),
                         ['action' => 'delete', $editora->id],
-                        ['confirm' => __('Are you sure you want to delete # {0}?', $editora->id)]
+                        ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $editora->id)]
                     )
                 ?></li>
                 <li><?= $this->Html->link(__('Listar Editoras'), ['action' => 'index']) ?></li>
@@ -19,10 +19,11 @@
                 <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
             </ul>
         </div>
-        <div class="editoras form large-9 medium-8 columns content">
+        <div class="col-sm-9 col-sm-6">
+            <div class="placeholdered">
             <?= $this->Form->create($editora) ?>
-            <fieldset>
-                <legend><?= __('Editar Editora') ?></legend>
+            <fieldset class="place">
+                <legend class="font"><?= __('Editar Editora') ?></legend>
                 <?php
                     echo $this->Form->control('nome', ['class' => 'form-control']);
                     echo $this->Form->control('contato', ['class' => 'form-control']);
@@ -30,8 +31,23 @@
                     echo $this->Form->control('email', ['class' => 'form-control']);
                 ?>
             </fieldset><br>
-            <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-11 col-md-1 btn btn-primary']) ?>
+            <?= $this->Form->button(__('Submit'), ['class'=>'col-md-offset-5 col-md-2 btn btn-primary']) ?>
             <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>
+<style type="text/css">
+    
+    .place {
+        font-size: 1.5em;
+    }
+    .font {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .placeholdered {
+        font-size: 1.5em;
+    }
+
+</style>
