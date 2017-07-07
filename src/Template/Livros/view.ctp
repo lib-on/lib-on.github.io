@@ -10,7 +10,7 @@
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <!-- <li><?= $this->Html->link(__('Editar Livro'), ['action' => 'edit', $livro->id]) ?> </li> -->
 
-                <li><?= $this->Form->postLink(__(' Deletar Livro'), ['action' => 'delete', $livro->id], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livro->id)], ['class' => 'fa fa-trash']) ?> </li>
+                <li><?= $this->Form->postLink(__(' Deletar Livro'), ['action' => 'delete', $livro->id], ['class' => 'fa fa-trash-o'], ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livro->id)]) ?> </li>
                 <li><?= $this->Html->link(__(' Listar Livros'), ['action' => 'index'], ['class' => 'fa fa-server']) ?> </li>
                 <li><?= $this->Html->link(__(' Novo Livro'), ['action' => 'add'], ['class' => 'fa fa-plus-square']) ?> </li>
 

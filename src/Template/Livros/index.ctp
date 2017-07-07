@@ -30,7 +30,7 @@ use Cake\ORM\TableRegistry;
                         <th scope="col"><?= $this->Paginator->sort('Autor') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('Categoria_id') ?></th>
                         <th scope="col"><?= $this->Paginator->sort('Editora_id') ?></th>
-                        <th scope="col"><?= $this->Paginator->sort('Quantidade') ?></th>
+                        <!-- <th scope="col"><?= $this->Paginator->sort('Quantidade') ?></th> -->
                         <th scope="col" class="actions"><?= __('Actions') ?></th> 
                     </tr>
                 </thead>

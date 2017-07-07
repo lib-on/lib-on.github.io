@@ -9,14 +9,15 @@
             <ul class="side-nav">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Deletar'),
+                        __(' Deletar'),
                         ['action' => 'delete', $emprestimo->id],
+                        ['class' => 'fa fa-trash'],
                         ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $emprestimo->id)]
                     )
                 ?></li>
-                <li><?= $this->Html->link(__('Listar Emprestimos'), ['action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-                <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__(' Listar Emprestimos'), ['action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+                <li><?= $this->Html->link(__(' Listar Livros'), ['controller' => 'Livros', 'action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+                <li><?= $this->Html->link(__(' Novo Livro'), ['controller' => 'Livros', 'action' => 'add'], ['class' => 'fa fa-plus-square']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-6">
@@ -25,9 +26,9 @@
             <fieldset class="place">
                 <legend class="font"><?= __('Editar Emprestimo') ?></legend>
                 <?php
-                    /*echo $this->Form->control('livro_id', ['options' => $livros]);
+                    echo $this->Form->control('livro_id', ['options' => $livros]);
                     echo $this->Form->control('id_usuario');
-                    echo $this->Form->control('identificador_livro');*/
+                    echo $this->Form->control('identificador_livro');
                     echo $this->Form->control('data_emprestimo');
                     echo $this->Form->control('data_entrega', ['empty' => true]);
                 ?>

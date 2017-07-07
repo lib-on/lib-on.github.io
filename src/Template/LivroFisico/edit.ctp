@@ -9,14 +9,15 @@
             <ul class="nav nav-pills nav-stacked">
          <!--li class="heading"><?= __('Actions') ?></li-->
         <li><?= $this->Form->postLink(
-                __('Deletar'),
+                __(' Deletar'),
                 ['action' => 'delete', $livroFisico->id],
+                ['class' => 'fa fa-trash'],
                 ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $livroFisico->id)]
             ) 
         ?></li>
-        <li><?= $this->Html->link(__('Listar Livro Fisico'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Listar Livros'), ['controller' => 'Livros', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('Novo Livro'), ['controller' => 'Livros', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__(' Listar Livro Fisico'), ['action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+        <li><?= $this->Html->link(__(' Listar Livros'), ['controller' => 'Livros', 'action' => 'index'], ['class' => 'fa fa-server']) ?></li>
+        <li><?= $this->Html->link(__(' Novo Livro'), ['controller' => 'Livros', 'action' => 'add'], ['class' => 'fa fa-plus-square']) ?></li>
     </ul>
     </div>
         <div class="col-sm-9 col-sm-6">

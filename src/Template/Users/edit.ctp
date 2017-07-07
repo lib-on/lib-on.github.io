@@ -9,12 +9,13 @@
             <ul class="nav nav-pills nav-stacked">
                 <!-- <li class="heading"><?= __('Actions') ?></li> -->
                 <li><?= $this->Form->postLink(
-                        __('Deletar'),
+                        __(' Deletar'),
                         ['action' => 'delete', $user->id],
+                        ['class' => 'fa fa-trash'],
                         ['confirm' => __('Tem certeza de que deseja excluir # {0}?', $user->id)]
                     )
                 ?></li>
-                <li><?= $this->Html->link(__('Listar Users'), ['action' => 'index']) ?></li>
+                <li><?= $this->Html->link(__(' Listar Users'), ['action' => 'index'], ['class' => 'fa fa-server']) ?></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-6">
